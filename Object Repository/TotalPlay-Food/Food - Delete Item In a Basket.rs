@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+   <description></description>
+   <name>Food - Delete Item In a Basket</name>
+   <tag></tag>
+   <elementGuidId>d2d07ab4-3340-41ca-9750-4b8f5465c525</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
+   <followRedirects>false</followRedirects>
+   <httpBody></httpBody>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
+   <katalonVersion>8.5.5</katalonVersion>
+   <maxResponseSize>-1</maxResponseSize>
+   <migratedVersion>5.4.1</migratedVersion>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${URL}/s/TP-FOOD/dw/shop/v23_1/baskets/${basketID}/items/ea9b42e58319dd5fcc457a1620?sellerId=2073&amp;itemId=ea9b42e58319dd5fcc457a1620</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
+   <soapHeader></soapHeader>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
+   <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>GlobalVariable.URL</defaultValue>
+      <description></description>
+      <id>8965475f-b145-4150-91bb-dfe70d884aba</id>
+      <masked>false</masked>
+      <name>URL</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.basketID</defaultValue>
+      <description></description>
+      <id>b776423b-e423-402f-8ebb-1454c1c6bad8</id>
+      <masked>false</masked>
+      <name>basketID</name>
+   </variables>
+   <wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>

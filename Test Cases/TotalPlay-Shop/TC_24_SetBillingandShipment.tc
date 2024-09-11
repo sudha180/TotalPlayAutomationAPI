@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_24_SetBillingandShipment</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0b842dff-9692-4c98-8c35-6eb955afbd93</testCaseGuid>
+</TestCaseEntity>

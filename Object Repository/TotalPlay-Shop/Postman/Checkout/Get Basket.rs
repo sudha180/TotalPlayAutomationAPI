@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+   <description></description>
+   <name>Get Basket</name>
+   <tag></tag>
+   <elementGuidId>0600588d-dd12-4e38-80e8-d5f354172a76</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
+   <followRedirects>false</followRedirects>
+   <httpBody></httpBody>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
+   <katalonVersion>9.3.0</katalonVersion>
+   <maxResponseSize>-1</maxResponseSize>
+   <migratedVersion>5.4.1</migratedVersion>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${URL}/s/${SITEID}/dw/shop/v23_1/baskets/${basketID}?page=review</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
+   <soapHeader></soapHeader>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
+   <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>GlobalVariable.URL</defaultValue>
+      <description></description>
+      <id>abff86ac-7a14-40fb-a7f3-16f2b168ed04</id>
+      <masked>false</masked>
+      <name>URL</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.SITEID</defaultValue>
+      <description></description>
+      <id>1403d7d5-1643-4338-bdf7-960a818c834a</id>
+      <masked>false</masked>
+      <name>SITEID</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.basketID</defaultValue>
+      <description></description>
+      <id>77674e7a-a59d-4ec0-9c1c-a7542afbd7d7</id>
+      <masked>false</masked>
+      <name>basketID</name>
+   </variables>
+   <wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>

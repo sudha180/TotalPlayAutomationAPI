@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+   <description></description>
+   <name>NewEditAddresses</name>
+   <tag></tag>
+   <elementGuidId>c84b723a-40d0-4472-9083-e4775d3c2a1d</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
+   <followRedirects>false</followRedirects>
+   <httpBody></httpBody>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\r\n    \&quot;c_latitude\&quot;:\&quot;19.432500\&quot;,\r\n    \&quot;c_longitude\&quot;:\&quot;-99.133200\&quot;\r\n}&quot;,
+  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Authorization</name>
+      <type>Main</type>
+      <value>${shop_auth_token}</value>
+      <webElementGuid>9838acba-2b25-46a2-8cc9-30d30f0aa238</webElementGuid>
+   </httpHeaderProperties>
+   <katalonVersion>8.5.5</katalonVersion>
+   <maxResponseSize>-1</maxResponseSize>
+   <migratedVersion>5.4.1</migratedVersion>
+   <restRequestMethod>PATCH</restRequestMethod>
+   <restUrl>https://bjcl-007.dx.commercecloud.salesforce.com/s/TP-FOOD/dw/shop/v23_2/customers/${customerId}/addresses/address_94448</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
+   <soapHeader></soapHeader>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
+   <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>GlobalVariable.customerId</defaultValue>
+      <description></description>
+      <id>f478bb8f-faf4-4b6c-a83d-0a2d60caf3f4</id>
+      <masked>false</masked>
+      <name>customerId</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.shop_auth_token</defaultValue>
+      <description></description>
+      <id>0e27bfba-296d-4e26-a162-f50080c1634d</id>
+      <masked>false</masked>
+      <name>shop_auth_token</name>
+   </variables>
+   <wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>

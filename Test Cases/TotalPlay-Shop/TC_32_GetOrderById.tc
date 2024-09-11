@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_32_GetOrderById</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2737e288-7119-4e0d-9b36-bd920cf249cf</testCaseGuid>
+</TestCaseEntity>

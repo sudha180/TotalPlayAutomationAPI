@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_15_Delete item in a Basket</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>abbaf1f9-8713-4488-b960-8b13802f5105</testCaseGuid>
+</TestCaseEntity>

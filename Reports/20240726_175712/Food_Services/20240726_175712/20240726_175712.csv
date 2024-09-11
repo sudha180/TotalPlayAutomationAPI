@@ -1,0 +1,1111 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Food_Services,,,,26-07-2024 17:57:18,26-07-2024 17:58:40,1m - 21.504s,PASSED
+,,,,,,,
+Test Cases/TotalPlay-Food/TC_1_Login_Service,,,,26-07-2024 17:57:19,26-07-2024 17:57:26,7.092s,PASSED
+"LoginResponse = sendRequest(findTestObject(""TotalPlay-Food/getTokenDelivery"", [""URL"":URL]))",,,,26-07-2024 17:57:19,26-07-2024 17:57:25,5.871s,PASSED
+assert getResponseStatusCode(LoginResponse) == 200,,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.023s,PASSED
+"Auth = ""ocapiResponse.access_token""",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.002s,PASSED
+"FoodBascketId = ""ocapiResponse.c_basketId_TP_FOOD""",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.002s,PASSED
+"FoodBasId = getElementPropertyValue(LoginResponse, FoodBascketId)",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.108s,PASSED
+"sfccAuthorization = getElementPropertyValue(LoginResponse, Auth)",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.045s,PASSED
+"Authorization = ""Bearer "" + sfccAuthorization",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.003s,PASSED
+FoodBasketId = FoodBasId,,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.002s,PASSED
+logInfo(bm_auth_token),,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.013s,PASSED
+if (sfccAuthorization.length() == 0),,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.002s,PASSED
+else,,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.014s,PASSED
+"BasketId_loginResponse = ""ocapiResponse.c_basketId""",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.001s,PASSED
+"CustomerId_loginResponse = ""ocapiResponse.customer_id""",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.001s,PASSED
+"basketId = getElementPropertyValue(LoginResponse, BasketId_loginResponse)",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.041s,PASSED
+"customerId = getElementPropertyValue(LoginResponse, CustomerId_loginResponse)",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.042s,PASSED
+basketID = basketId,,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.001s,PASSED
+sla_customerId = customerId,,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.002s,PASSED
+println(basketID),,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.005s,PASSED
+println(sla_customerId),,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.002s,PASSED
+"refresh_token = ""ocapiResponse.refresh_token""",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.001s,PASSED
+"customer_email = ""ocapiResponse.customer_email""",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.001s,PASSED
+"c_brmId = ""ocapiResponse.c_brmId""",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.002s,PASSED
+"customer_name = ""ocapiResponse.customer_name""",,,,26-07-2024 17:57:25,26-07-2024 17:57:25,0.001s,PASSED
+"totalplay.Common.verifyPropertyExist(LoginResponse, refresh_token)",,,,26-07-2024 17:57:25,26-07-2024 17:57:26,0.063s,PASSED
+"totalplay.Common.verifyPropertyValueExist(LoginResponse, refresh_token)",,,,26-07-2024 17:57:26,26-07-2024 17:57:26,0.041s,PASSED
+"totalplay.Common.verifyPropertyExist(LoginResponse, customer_email)",,,,26-07-2024 17:57:26,26-07-2024 17:57:26,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(LoginResponse, customer_email)",,,,26-07-2024 17:57:26,26-07-2024 17:57:26,0.035s,PASSED
+"totalplay.Common.verifyPropertyExist(LoginResponse, customer_name)",,,,26-07-2024 17:57:26,26-07-2024 17:57:26,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(LoginResponse, customer_name)",,,,26-07-2024 17:57:26,26-07-2024 17:57:26,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(LoginResponse, c_brmId)",,,,26-07-2024 17:57:26,26-07-2024 17:57:26,0.049s,PASSED
+"totalplay.Common.verifyPropertyValueExist(LoginResponse, c_brmId)",,,,26-07-2024 17:57:26,26-07-2024 17:57:26,0.044s,PASSED
+,,,,,,,
+Test Cases/TotalPlay-Food/TC_2_Food_Store_Listing_Page_(SLP),,,,26-07-2024 17:57:26,26-07-2024 17:57:33,7.454s,PASSED
+"callTestCase(findTestCase(""TotalPlay-Food/TC_1_Login_Service""), [:], STOP_ON_FAILURE)",,,,26-07-2024 17:57:26,26-07-2024 17:57:30,3.793s,PASSED
+"FoodSLP = sendRequest(findTestObject(""TotalPlay-Food/Food SLP"", [""URL"":URL]))",,,,26-07-2024 17:57:30,26-07-2024 17:57:32,1.599s,PASSED
+"verifyResponseStatusCode(FoodSLP, 200)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.021s,PASSED
+"pageId = ""pageId""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"pageTypeId = ""pageTypeId""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.002s,PASSED
+"pageTitle = ""pageTitle""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentTypeId = ""components[0].componentTypeId""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.002s,PASSED
+"components = ""components""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentType = ""components[0].componentType""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_bannerLayout = ""components[0].bannerLayout""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_textHeadline = ""components[0].textHeadline""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.000s,PASSED
+"components_componentAssets = ""components[0].componentAssets""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_componentTypeId = ""components[0].componentAssets[0].componentTypeId""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_image = ""components[0].componentAssets[0].image""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_componentType = ""components[0].componentAssets[0].componentType""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_corporateColorCode = ""components[0].componentAssets[0].corporateColorCode""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_bannerDesc = ""components[0].componentAssets[0].bannerDesc""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_isAgeRestricted = ""components[0].componentAssets[0].isAgeRestricted""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.002s,PASSED
+"components_componentAssets_link = ""components[0].componentAssets[0].link""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_bannerName = ""components[0].componentAssets[0].bannerName""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.002s,PASSED
+"components_componentAssets_logo = ""components[0].componentAssets[0].logo""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_linkType = ""components[0].componentAssets[0].linkType""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.000s,PASSED
+"components_componentAssets_positionAfter = ""components[0].componentAssets[0].positionAfter""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.003s,PASSED
+"components_componentAssets_deliveryTime = ""components[0].componentAssets[0].deliveryTime""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_promotion = ""components[0].componentAssets[0].promotion""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_storeName = ""components[0].componentAssets[0].storeName""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.001s,PASSED
+"components_componentAssets_ID = ""components[0].componentAssets[0].ID""",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.000s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, pageId)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, pageId)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentType)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentType)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_bannerLayout)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_bannerLayout)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentTypeId)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.060s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentTypeId)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.047s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, pageTitle)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, pageTitle)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.044s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, pageTypeId)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, pageTypeId)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.036s,PASSED
+"verifyElementPropertyValue(FoodSLP, ""components[0].componentAssets[0].corporateColorCode"", """")",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.044s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(FoodSLP, components_componentAssets_corporateColorCode)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.035s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentAssets_componentType)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.043s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentAssets_componentType)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentAssets_image)",,,,26-07-2024 17:57:32,26-07-2024 17:57:32,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentAssets_image)",,,,26-07-2024 17:57:32,26-07-2024 17:57:33,0.036s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentAssets)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentAssets_componentTypeId)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.035s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentAssets_componentTypeId)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.035s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_textHeadline)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.030s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_textHeadline)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentAssets_bannerName)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.033s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentAssets_bannerName)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.043s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentAssets_link)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.050s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentAssets_link)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.054s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodSLP, components_componentAssets_isAgeRestricted)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.053s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentAssets_bannerDesc)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.037s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentAssets_bannerDesc)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.030s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentAssets_deliveryTime)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.031s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentAssets_promotion)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.029s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentAssets_promotion)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.032s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(FoodSLP, components_componentAssets_positionAfter)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.033s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentAssets_linkType)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentAssets_linkType)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.043s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSLP, components_componentAssets_storeName)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.029s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSLP, components_componentAssets_storeName)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.031s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(FoodSLP, components_componentAssets_ID)",,,,26-07-2024 17:57:33,26-07-2024 17:57:33,0.035s,PASSED
+,,,,,,,
+Test Cases/TotalPlay-Food/TC_3_Food_PLP,,,,26-07-2024 17:57:33,26-07-2024 17:57:40,6.905s,PASSED
+"callTestCase(findTestCase(""TotalPlay-Food/TC_1_Login_Service""), [:], STOP_ON_FAILURE)",,,,26-07-2024 17:57:34,26-07-2024 17:57:37,3.336s,PASSED
+"FoodPLP = sendRequest(findTestObject(""TotalPlay-Food/Food PLP"", [""URL"":URL]))",,,,26-07-2024 17:57:37,26-07-2024 17:57:38,0.637s,PASSED
+"verifyResponseStatusCode(FoodPLP, 200)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.003s,PASSED
+"action = ""action""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"queryString = ""queryString""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"locale = ""locale""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"pageTitle = ""pageTitle""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"pageId = ""pageId""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"pageTypeId = ""pageTypeId""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components = ""components""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_componentTypeId = ""components[0].componentTypeId""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_componentType = ""components[0].componentType""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData = ""components[1].storeData""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_ID = ""components[1].storeData.ID""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_name = ""components[1].storeData.name""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_phone = ""components[1].storeData.phone""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_address = ""components[1].storeData.address""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_postalCode = ""components[1].storeData.postalCode""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_logo = ""components[1].storeData.logo""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_city = ""components[1].storeData.city""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_banner = ""components[1].storeData.banner""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_image = ""components[1].storeData.image""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_latitude = ""components[1].storeData.latitude""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_longitude = ""components[1].storeData.longitude""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_verticalsAvailable = ""components[1].storeData.verticalsAvailable""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_OndemandEDD = ""components[1].storeData.OndemandEDD""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_link = ""components[1].storeData.link""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_MultistoreEDD = ""components[1].storeData.MultistoreEDD""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_linkType = ""components[1].storeData.linkType""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_grade = ""components[1].storeData.grade""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_open = ""components[1].storeData.open""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_evaluationsCount = ""components[1].storeData.evaluationsCount""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_openHours = ""components[1].storeData.openHours""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_openHours_time = ""components[1].storeData.openHours[0].time""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_openHours_time_openingTime = ""components[1].storeData.openHours[0].time[0].openingTime""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_openHours_time_closingTime = ""components[1].storeData.openHours[0].time[0].closingTime""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_openHours_day = ""components[1].storeData.openHours[0].day""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_shipmentCost = ""components[1].storeData.shipmentCost""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_shipmentCost_currency = ""components[1].storeData.shipmentCost.currency""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_storeData_shipmentCost_formatted = ""components[1].storeData.shipmentCost.formatted""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_storeType = ""components[1].storeData.storeType""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components__storeData_ratings = ""components[1].storeData.ratings""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.002s,PASSED
+"components_storeData_corporateColorCode = ""components[1].storeData.corporateColorCode""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_grantiasDeLaTienda = ""components[1].storeData.grantiasDeLaTienda""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_tarifaDeEntrega = ""components[1].storeData.tarifaDeEntrega""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_politicaDePrecios = ""components[1].storeData.politicaDePrecios""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_storeData_ageShowWarningModel = ""components[1].storeData.ageShowWarningModel""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_componentAssets = ""components[2].componentAssets[0]""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_componentAssets_componentTypeId = ""components[2].componentAssets[0].componentTypeId""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_componentAssets_link = ""components[2].componentAssets[0].link""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_componentAssets_isAgeRestricted = ""components[2].componentAssets[0].isAgeRestricted""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_componentAssets_bannerDesc = ""components[2].componentAssets[0].bannerDesc""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_componentAssets_bannerName = ""components[2].componentAssets[0].bannerName""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_componentAssets_linkType = ""components[2].componentAssets[0].linkType""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_componentAssets_logo = ""components[2].componentAssets[0].logo""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_componentAssets_corporateColorCode = ""components[2].componentAssets[0].corporateColorCode""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"components_componentAssets_deliveryTime = ""components[2].componentAssets[0].deliveryTime""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.000s,PASSED
+"components_componentAssets_positionAfter = ""components[2].componentAssets[0].positionAfter""",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.001s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_componentType)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.030s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_componentType)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_componentType)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.030s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_componentType)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.035s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.035s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_ID)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.031s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_ID)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.036s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_name)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.032s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_name)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_address)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_address)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.034s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_postalCode)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.035s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_postalCode)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_logo)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.036s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_logo)",,,,26-07-2024 17:57:38,26-07-2024 17:57:38,0.033s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_city)",,,,26-07-2024 17:57:38,26-07-2024 17:57:39,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_city)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.031s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_banner)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.031s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_banner)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_image)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.033s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_image)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.035s,PASSED
+"totalplay.Common.getDecimalValueofObject(FoodPLP, components_storeData_latitude)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.035s,PASSED
+"totalplay.Common.getDecimalValueofObject(FoodPLP, components_storeData_longitude)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.029s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_storeData_verticalsAvailable)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_link)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.034s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_link)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.032s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_componentAssets_deliveryTime)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.029s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_storeData_MultistoreEDD)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.035s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_linkType)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.036s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_linkType)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.036s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPLP, components_storeData_grade)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.034s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_storeData_open)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.029s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPLP, components_storeData_evaluationsCount)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_openHours)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_openHours_time)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_openHours_time_openingTime)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.028s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_openHours_time_openingTime)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_openHours_time_closingTime)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.029s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_openHours_time_closingTime)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.029s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_openHours_day)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_openHours_day)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.031s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_shipmentCost)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_shipmentCost_currency)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.035s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_shipmentCost_currency)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.036s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_shipmentCost_formatted)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.032s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_shipmentCost_formatted)",,,,26-07-2024 17:57:39,26-07-2024 17:57:39,0.033s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_storeData_storeType)",,,,26-07-2024 17:57:39,26-07-2024 17:57:40,0.036s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_storeData_storeType)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.031s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPLP, components__storeData_ratings)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.031s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_storeData_grantiasDeLaTienda)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.029s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_storeData_tarifaDeEntrega)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.032s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_storeData_politicaDePrecios)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.028s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_storeData_ageShowWarningModel)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_componentAssets)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.032s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_componentAssets_componentTypeId)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.031s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_componentAssets_componentTypeId)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_componentAssets_link)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_componentAssets_link)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.034s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_componentAssets_isAgeRestricted)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.033s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_componentAssets_bannerDesc)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.030s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_componentAssets_bannerDesc)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.036s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_componentAssets_bannerName)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.034s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_componentAssets_bannerName)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPLP, components_componentAssets_linkType)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPLP, components_componentAssets_linkType)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.028s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_componentAssets_logo)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.029s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_componentAssets_corporateColorCode)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.027s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_componentAssets_deliveryTime)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.027s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPLP, components_componentAssets_positionAfter)",,,,26-07-2024 17:57:40,26-07-2024 17:57:40,0.032s,PASSED
+,,,,,,,
+Test Cases/TotalPlay-Food/TC_4_Food_SCP,,,,26-07-2024 17:57:40,26-07-2024 17:57:46,5.790s,PASSED
+"callTestCase(findTestCase(""TotalPlay-Food/TC_1_Login_Service""), [:], STOP_ON_FAILURE)",,,,26-07-2024 17:57:41,26-07-2024 17:57:44,3.358s,PASSED
+"FoodSCP = sendRequest(findTestObject(""TotalPlay-Food/Food SCP""))",,,,26-07-2024 17:57:44,26-07-2024 17:57:45,1.086s,PASSED
+"verifyResponseStatusCode(FoodSCP, 200)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.002s,PASSED
+"id = ""id""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"name = ""name""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.001s,PASSED
+"c_result = ""c_result""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores = ""c_result.stores""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.001s,PASSED
+"c_result_stores_ID = ""c_result.stores[0].ID""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_name = ""c_result.stores[0].name""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_corporateName = ""c_result.stores[0].corporateName""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.001s,PASSED
+"c_result_stores_corporateColorCode = ""c_result.stores[0].corporateColorCode""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_image = ""c_result.stores[0].image""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.001s,PASSED
+"c_result_stores_ondemandEDD = ""c_result.stores[0].ondemandEDD""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_promotionalBannerImage = ""c_result.stores[0].promotionalBannerImage""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_link = ""c_result.stores[0].link""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_storeOpen = ""c_result.stores[0].storeOpen""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.001s,PASSED
+"c_result_stores_isStoreActive = ""c_result.stores[0].isStoreActive""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_todayOpenHrs_time = ""c_result.stores[0].todayOpenHrs.time""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_todayOpenHrs_time_openingTime = ""c_result.stores[0].todayOpenHrs.time[0].openingTime""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_todayOpenHrs_time_closingTime = ""c_result.stores[0].todayOpenHrs.time[0].closingTime""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_todayOpenHrs_closed = ""c_result.stores[0].todayOpenHrs.closed""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_stores_todayOpenHrs_day = ""c_result.stores[0].todayOpenHrs.day""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.001s,PASSED
+"c_result_stores_linkType = ""c_result.stores[0].linkType""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_pageDetails = ""c_result.pageDetails""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.001s,PASSED
+"c_result_pageDetails_pagesCount = ""c_result.pageDetails.pagesCount""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_pageDetails_storesPerPage = ""c_result.pageDetails.storesPerPage""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.001s,PASSED
+"c_result_pageDetails_currentPage = ""c_result.pageDetails.currentPage""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.001s,PASSED
+"c_result_stores_count = ""c_result.stores_count""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.000s,PASSED
+"c_result_overall_stores_count = ""c_result.overall_stores_count""",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.001s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, id)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, id)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, name)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, name)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_ID)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, c_result_stores_ID)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_name)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, c_result_stores_name)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_corporateName)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, c_result_stores_corporateName)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_corporateColorCode)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, c_result_stores_corporateColorCode)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_image)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, c_result_stores_image)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_ondemandEDD)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, c_result_stores_ondemandEDD)",,,,26-07-2024 17:57:45,26-07-2024 17:57:45,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_promotionalBannerImage)",,,,26-07-2024 17:57:45,26-07-2024 17:57:46,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, c_result_stores_promotionalBannerImage)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_link)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, c_result_stores_link)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.026s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodSCP, c_result_stores_storeOpen)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_linkType)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, c_result_stores_linkType)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_pageDetails)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.026s,PASSED
+"totalplay.Common.getNumValueofObject(FoodSCP, c_result_pageDetails_pagesCount)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.032s,PASSED
+"totalplay.Common.getNumValueofObject(FoodSCP, c_result_pageDetails_storesPerPage)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_pageDetails_currentPage)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodSCP, c_result_pageDetails_currentPage)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.025s,PASSED
+"totalplay.Common.getNumValueofObject(FoodSCP, c_result_overall_stores_count)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.025s,PASSED
+"totalplay.Common.getNumValueofObject(FoodSCP, c_result_stores_count)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_todayOpenHrs_time)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_todayOpenHrs_time_openingTime)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_todayOpenHrs_time_closingTime)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.026s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodSCP, c_result_stores_todayOpenHrs_closed)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodSCP, c_result_stores_todayOpenHrs_day)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.026s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodSCP, c_result_stores_isStoreActive)",,,,26-07-2024 17:57:46,26-07-2024 17:57:46,0.026s,PASSED
+,,,,,,,
+Test Cases/TotalPlay-Food/TC_5_Food_PCP,,,,26-07-2024 17:57:46,26-07-2024 17:57:52,6.240s,PASSED
+"callTestCase(findTestCase(""TotalPlay-Food/TC_1_Login_Service""), [:], STOP_ON_FAILURE)",,,,26-07-2024 17:57:47,26-07-2024 17:57:50,2.945s,PASSED
+"FoodPCP = sendRequest(findTestObject(""TotalPlay-Food/Food PCP"", [""URL"":URL]))",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.791s,PASSED
+"verifyResponseStatusCode(FoodPCP, 200)",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.003s,PASSED
+"count = ""count""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits = ""hits""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_type = ""hits[0]._type""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_hit_type = ""hits[0].hit_type""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_link = ""hits[0].link""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_product_name = ""hits[0].product_name""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_product_id = ""hits[0].product_id""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_product_type = ""hits[0].product_type""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_product_type_type = ""hits[0].product_type._type""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_product_type_item = ""hits[0].product_type.item""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_c_description = ""hits[0].c_description""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_basePrice = ""hits[0].c_basePrice""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_linkType = ""hits[0].c_linkType""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_c_productType = ""hits[0].c_productType""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_basePrice_value = ""hits[0].c_basePrice.value""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_c_basePrice_currency = ""hits[0].c_basePrice.currency""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_c_basePrice_formatted = ""hits[0].c_basePrice.formatted""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_basePrice_decimalPrice = ""hits[0].c_basePrice.decimalPrice""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_salePrice = ""hits[0].c_salePrice""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_c_salePrice_value = ""hits[0].c_salePrice.value""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_salePrice_currency = ""hits[0].c_salePrice.currency""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_c_salePrice_formatted = ""hits[0].c_salePrice.formatted""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_salePrice_decimalPrice = ""hits[0].c_salePrice.decimalPrice""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_Image = ""hits[0].c_Image""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_Image_alt = ""hits[0].c_Image[0].alt""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_Image_url = ""hits[0].c_Image[0].url""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_c_Image_title = ""hits[0].c_Image[0].title""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_c_promoPrice = ""hits[0].c_promoPrice""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_discount_percentage = ""hits[0].c_discount_percentage""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_c_isVariant = ""hits[0].c_isVariant""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_emi_months = ""hits[0].c_emi_months""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"hits_c_emi_installment_amount = ""hits[0].c_emi_installment_amount""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"hits_c_Edd = ""hits[0].c_Edd""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"refinements = ""refinements""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"refinements_type0 = ""refinements[0]._type""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"refinements_attribute_id0 = ""refinements[0].attribute_id""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"refinements_label0 = ""refinements[0].label""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"refinements_type = ""refinements[1]._type""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"refinements_attribute_id = ""refinements[1].attribute_id""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"refinements_label = ""refinements[1].label""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"refinements_values = ""refinements[1].values""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"search_phrase_suggestions = ""search_phrase_suggestions""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"search_phrase_suggestions_type = ""search_phrase_suggestions._type""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"sorting_options = ""sorting_options""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"sorting_options_type = ""sorting_options[0]._type""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"sorting_options_label = ""sorting_options[0].label""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.001s,PASSED
+"sorting_options_id = ""sorting_options[0].id""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"start = ""start""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"total = ""total""",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.000s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPCP, count)",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits)",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.030s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_type)",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.035s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_type)",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_hit_type)",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_hit_type)",,,,26-07-2024 17:57:50,26-07-2024 17:57:50,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_link)",,,,26-07-2024 17:57:50,26-07-2024 17:57:51,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_link)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_product_name)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.029s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_product_name)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_product_id)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_product_id)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_product_type_type)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.034s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_product_type_type)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.030s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_product_type)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.026s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPCP, hits_product_type_item)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_c_basePrice)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_c_linkType)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.028s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_c_linkType)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_c_productType)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_c_productType)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.032s,PASSED
+"totalplay.Common.getDecimalValueofObject(FoodPCP, hits_c_basePrice_value)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_c_basePrice_currency)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_c_basePrice_currency)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_c_basePrice_formatted)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_c_basePrice_formatted)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_c_basePrice_decimalPrice)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_c_basePrice_decimalPrice)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_c_salePrice)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.033s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_c_Image_alt)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_c_Image_alt)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(FoodPCP, hits_c_salePrice_currency)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.029s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(FoodPCP, hits_c_salePrice_formatted)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(FoodPCP, hits_c_salePrice_decimalPrice)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(FoodPCP, hits_c_Image_url)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_c_Image_title)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.028s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_c_Image_title)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.028s,PASSED
+"totalplay.Common.getDecimalValueofObject(FoodPCP, hits_c_promoPrice)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.027s,PASSED
+"totalplay.Common.getDecimalValueofObject(FoodPCP, hits_c_salePrice_value)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.027s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPCP, hits_c_isVariant)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.024s,PASSED
+"totalplay.Common.getDecimalValueofObject(FoodPCP, hits_c_emi_months)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.036s,PASSED
+"totalplay.Common.getDecimalValueofObject(FoodPCP, hits_c_emi_installment_amount)",,,,26-07-2024 17:57:51,26-07-2024 17:57:51,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, hits_c_Edd)",,,,26-07-2024 17:57:51,26-07-2024 17:57:52,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, hits_c_Edd)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, refinements)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, refinements_type0)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, refinements_type0)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.024s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, refinements_attribute_id0)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, refinements_attribute_id0)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, refinements_label0)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, refinements_label0)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, refinements_type)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, refinements_type)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.024s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, refinements_label)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.028s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, refinements_label)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, refinements_attribute_id)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, refinements_attribute_id)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, refinements_values)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, search_phrase_suggestions)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, search_phrase_suggestions_type)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.041s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, search_phrase_suggestions_type)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.042s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, sorting_options)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.035s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, sorting_options_type)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.031s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, sorting_options_type)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, sorting_options_label)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, sorting_options_label)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPCP, sorting_options_id)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPCP, sorting_options_id)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.030s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPCP, start)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.030s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPCP, total)",,,,26-07-2024 17:57:52,26-07-2024 17:57:52,0.035s,PASSED
+,,,,,,,
+Test Cases/TotalPlay-Food/TC_6_Food PDP,,,,26-07-2024 17:57:52,26-07-2024 17:58:00,8.038s,PASSED
+"callTestCase(findTestCase(""TotalPlay-Food/TC_1_Login_Service""), [:], STOP_ON_FAILURE)",,,,26-07-2024 17:57:53,26-07-2024 17:57:56,3.128s,PASSED
+"FoodPDP = sendRequest(findTestObject(""TotalPlay-Food/Food PDP"", [""URL"":URL]))",,,,26-07-2024 17:57:56,26-07-2024 17:57:58,1.750s,PASSED
+"verifyResponseStatusCode(FoodPDP, 200)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.002s,PASSED
+"type = ""_type""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"brand = ""brand""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"currency = ""currency""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"id = ""id""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"inventory = ""inventory""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"inventory_type = ""inventory._type""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"inventory_ats = ""inventory.ats""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"inventory_backorderable = ""inventory.backorderable""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"inventory_id = ""inventory.id""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"inventory_orderable = ""inventory.orderable""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"inventory_preorderable = ""inventory.preorderable""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"inventory_stock_level = ""inventory.stock_level""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"min_order_quantity = ""min_order_quantity""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"name = ""name""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"price = ""price""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"price_per_unit = ""price_per_unit""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"product_promotions = ""product_promotions""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"product_promotions_type = ""product_promotions[0]._type""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"product_promotions_link = ""product_promotions[0].link""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"product_promotions_promotion_id = ""product_promotions[0].promotion_id""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"step_quantity = ""step_quantity""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"type_type = ""type._type""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_PromoAvailable = ""c_PromoAvailable""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_corporateName = ""c_corporateName""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_description = ""c_description""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_discountPercentage = ""c_discountPercentage""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_individualDelivery = ""c_individualDelivery""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_marketplaceProduct = ""c_marketplaceProduct""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_miraklProductDataSource = ""c_miraklProductDataSource""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_miraklProductId = ""c_miraklProductId""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_miraklShopID = ""c_miraklShopID""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_miraklShopName = ""c_miraklShopName""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_productType = ""c_productType""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_promotionName = ""c_promotionName""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_sapId = ""c_sapId""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_selectable = ""c_selectable""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_seller_lead_times = ""c_seller-lead-times""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_sellerDescription = ""c_sellerDescription""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_shopIdName = ""c_shopIdName""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_tpshop = ""c_tpshop""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_updateMiraklImages = ""c_updateMiraklImages""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_verticalType = ""c_verticalType""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_salePrice = ""c_salePrice""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_salePrice_value = ""c_salePrice.value""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_salePrice_currency = ""c_salePrice.currency""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_salePrice_decimalPrice = ""c_salePrice.decimalPrice""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_basePrice = ""c_basePrice""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_basePrice_currency = ""c_basePrice.currency""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_basePrice_decimalPrice = ""c_basePrice.decimalPrice""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts = ""c_similarProducts""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_online = ""c_similarProducts[0].online""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_link = ""c_similarProducts[0].link""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_linkType = ""c_similarProducts[0].linkType""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_productId = ""c_similarProducts[0].productId""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_productName = ""c_similarProducts[0].productName""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_productDesc = ""c_similarProducts[0].productDesc""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_productType = ""c_similarProducts[0].productType""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_basePrice = ""c_similarProducts[0].basePrice""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_basePrice_currency = ""c_similarProducts[0].basePrice.currency""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_basePrice_decimalPrice = ""c_similarProducts[0].basePrice.decimalPrice""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_salePrice = ""c_similarProducts[0].salePrice""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_salePrice_value = ""c_similarProducts[0].salePrice.value""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_salePrice_currency = ""c_similarProducts[0].salePrice.currency""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_salePrice_formatted = ""c_similarProducts[0].salePrice.formatted""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_image_alt = ""c_similarProducts[0].image[0].alt""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_image_url = ""c_similarProducts[0].image[0].url""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_imagetitle = ""c_similarProducts[0].image[0].title""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_discount_percentage = ""c_similarProducts[0].discount_percentage""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_promotionName = ""c_similarProducts[0].promotionName""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_promotionName_calloutMsg = ""c_similarProducts[0].promotionName[0].calloutMsg""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_promotionName_details = ""c_similarProducts[0].promotionName[0].details""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_promotionName_enabled = ""c_similarProducts[0].promotionName[0].enabled""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_promotionName_id = ""c_similarProducts[0].promotionName[0].id""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_promotionName_name = ""c_similarProducts[0].promotionName[0].name""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_promotionName_promotionClass = ""c_similarProducts[0].promotionName[0].promotionClass""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_promotionName_rank = ""c_similarProducts[0].promotionName[0].rank""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_promoPrice = ""c_similarProducts[0].promoPrice""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_isVariant = ""c_similarProducts[0].isVariant""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"c_similarProducts_colorSwatches = ""c_similarProducts[0].colorSwatches""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_emi_installment_amount = ""c_similarProducts[0].emi_installment_amount""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.000s,PASSED
+"c_similarProducts_bestOfferPrice = ""c_similarProducts[0].bestOfferPrice""",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.001s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, type)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, type)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, brand)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, brand)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, currency)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, currency)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, id)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, id)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, inventory)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, inventory_type)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.043s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, inventory_type)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.043s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPDP, inventory_ats)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.026s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPDP, inventory_backorderable)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, inventory_id)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, inventory_id)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.027s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPDP, inventory_orderable)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.025s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPDP, inventory_preorderable)",,,,26-07-2024 17:57:58,26-07-2024 17:57:58,0.026s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPDP, inventory_stock_level)",,,,26-07-2024 17:57:58,26-07-2024 17:57:59,0.025s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPDP, min_order_quantity)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, name)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, name)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.024s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPDP, price)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.029s,PASSED
+"totalplay.Common.getNumValueofObject(FoodPDP, price_per_unit)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, type_type)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, type_type)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_PromoAvailable)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_PromoAvailable)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.032s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_description)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_description)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.027s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPDP, c_individualDelivery)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.024s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPDP, c_marketplaceProduct)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_miraklProductDataSource)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_miraklProductDataSource)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.035s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_miraklProductId)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.033s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_miraklProductId)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.060s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_miraklShopID)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.058s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_miraklShopName)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_productType)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.054s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_productType)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_sapId)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_sapId)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_selectable)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_selectable)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.024s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_sellerDescription)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_sellerDescription)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.031s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_shopIdName)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.028s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPDP, c_tpshop)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.029s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPDP, c_updateMiraklImages)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_verticalType)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.024s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_salePrice)",,,,26-07-2024 17:57:59,26-07-2024 17:57:59,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_salePrice_currency)",,,,26-07-2024 17:57:59,26-07-2024 17:58:00,0.031s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_salePrice_currency)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_salePrice_decimalPrice)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_salePrice_decimalPrice)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_basePrice_currency)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.029s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_basePrice_currency)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.028s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_basePrice_decimalPrice)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_basePrice_decimalPrice)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.026s,PASSED
+"totalplay.Common.getBooleanValueofObject(FoodPDP, c_similarProducts_online)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.029s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_link)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.028s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_similarProducts_link)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_linkType)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_similarProducts_linkType)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_productId)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_similarProducts_productId)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.024s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_productName)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_similarProducts_productName)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.032s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_productDesc)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_similarProducts_productDesc)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_productType)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_similarProducts_productType)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.024s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_basePrice)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_similarProducts_basePrice_currency)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_basePrice_currency)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_similarProducts_basePrice_decimalPrice)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_basePrice_decimalPrice)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.025s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_salePrice)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.023s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_image_alt)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(FoodPDP, c_similarProducts_image_alt)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.024s,PASSED
+"totalplay.Common.verifyPropertyExist(FoodPDP, c_similarProducts_imagetitle)",,,,26-07-2024 17:58:00,26-07-2024 17:58:00,0.025s,PASSED
+,,,,,,,
+Test Cases/TotalPlay-Food/TC_7_SLP_Search,,,,26-07-2024 17:58:00,26-07-2024 17:58:07,6.404s,PASSED
+"callTestCase(findTestCase(""TotalPlay-Food/TC_1_Login_Service""), [:], STOP_ON_FAILURE)",,,,26-07-2024 17:58:01,26-07-2024 17:58:04,3.806s,PASSED
+"SLPSearch = sendRequest(findTestObject(""TotalPlay-Food/SLP Search""))",,,,26-07-2024 17:58:04,26-07-2024 17:58:06,1.572s,PASSED
+"verifyResponseStatusCode(SLPSearch, 200)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.003s,PASSED
+"stores_0_name = ""stores[0].name""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_corporateName = ""stores[0].corporateName""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_ondemandEDD = ""stores[0].ondemandEDD""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_multiStoreEDD = ""stores[0].multiStoreEDD""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_image = ""stores[0].image""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_productsCount = ""stores[0].productsCount""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_link = ""stores[0].link""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_linkType = ""stores[0].linkType""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_corporateColorCode = ""stores[0].corporateColorCode""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_verticalType = ""stores[0].verticalType""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.001s,PASSED
+"stores_0_distance = ""stores[0].distance""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_isInRange = ""stores[0].isInRange""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_storeOpen = ""stores[0].storeOpen""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_isAgeRestricted = ""stores[0].isAgeRestricted""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_categoryName = ""stores[0].categoryName""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_products_0_productId = ""stores[0].products[0].productId""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.001s,PASSED
+"stores_0_products_0_productName = ""stores[0].products[0].productName""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"stores_0_products_0_link = ""stores[0].products[0].link""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.001s,PASSED
+"stores_0_products_0_linkType = ""stores[0].products[0].linkType""",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.000s,PASSED
+"totalplay.Common.verifyPropertyExist(SLPSearch, stores_0_name)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.024s,PASSED
+"totalplay.Common.verifyPropertyValueExist(SLPSearch, stores_0_name)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(SLPSearch, stores_0_corporateName)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.032s,PASSED
+"totalplay.Common.verifyPropertyValueExist(SLPSearch, stores_0_corporateName)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(SLPSearch, stores_0_ondemandEDD)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(SLPSearch, stores_0_ondemandEDD)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(SLPSearch, stores_0_multiStoreEDD)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.025s,PASSED
+"totalplay.Common.verifyPropertyEmpty(SLPSearch, stores_0_image)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.002s,PASSED
+"totalplay.Common.getNumValueofObject(SLPSearch, stores_0_productsCount)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(SLPSearch, stores_0_link)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(SLPSearch, stores_0_link)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(SLPSearch, stores_0_linkType)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(SLPSearch, stores_0_linkType)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(SLPSearch, stores_0_corporateColorCode)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(SLPSearch, stores_0_verticalType)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.027s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(SLPSearch, stores_0_distance)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.getBooleanValueofObject(SLPSearch, stores_0_isInRange)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.028s,PASSED
+"totalplay.Common.getBooleanValueofObject(SLPSearch, stores_0_storeOpen)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.getBooleanValueofObject(SLPSearch, stores_0_isAgeRestricted)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.033s,PASSED
+"totalplay.Common.verifyPropertyExist(SLPSearch, stores_0_categoryName)",,,,26-07-2024 17:58:06,26-07-2024 17:58:06,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(SLPSearch, stores_0_categoryName)",,,,26-07-2024 17:58:06,26-07-2024 17:58:07,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(SLPSearch, stores_0_products_0_productId)",,,,26-07-2024 17:58:07,26-07-2024 17:58:07,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(SLPSearch, stores_0_products_0_productId)",,,,26-07-2024 17:58:07,26-07-2024 17:58:07,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(SLPSearch, stores_0_products_0_productName)",,,,26-07-2024 17:58:07,26-07-2024 17:58:07,0.025s,PASSED
+"totalplay.Common.verifyPropertyValueExist(SLPSearch, stores_0_products_0_productName)",,,,26-07-2024 17:58:07,26-07-2024 17:58:07,0.027s,PASSED
+"totalplay.Common.verifyPropertyExist(SLPSearch, stores_0_products_0_link)",,,,26-07-2024 17:58:07,26-07-2024 17:58:07,0.026s,PASSED
+"totalplay.Common.verifyPropertyValueExist(SLPSearch, stores_0_products_0_link)",,,,26-07-2024 17:58:07,26-07-2024 17:58:07,0.026s,PASSED
+"totalplay.Common.verifyPropertyExist(SLPSearch, stores_0_products_0_linkType)",,,,26-07-2024 17:58:07,26-07-2024 17:58:07,0.029s,PASSED
+"totalplay.Common.verifyPropertyValueExist(SLPSearch, stores_0_products_0_linkType)",,,,26-07-2024 17:58:07,26-07-2024 17:58:07,0.027s,PASSED
+,,,,,,,
+Test Cases/TotalPlay-Food/TC_8_PLP_Search,,,,26-07-2024 17:58:07,26-07-2024 17:58:13,6.073s,PASSED
+"callTestCase(findTestCase(""TotalPlay-Food/TC_1_Login_Service""), [:], STOP_ON_FAILURE)",,,,26-07-2024 17:58:07,26-07-2024 17:58:10,2.973s,PASSED
+"PLPSearch = sendRequest(findTestObject(""TotalPlay-Food/PLP Search"", [""URL"":URL]))",,,,26-07-2024 17:58:10,26-07-2024 17:58:11,0.586s,PASSED
+"verifyResponseStatusCode(PLPSearch, 200)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.002s,PASSED
+"categories_0_id = ""categories[0].id""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"categories_0_name = ""categories[0].name""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"categories_0_link = ""categories[0].link""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"categories_0_linkType = ""categories[0].linkType""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"categories_0_parentCategoryName = ""categories[0].parentCategoryName""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"categories_1_id = ""categories[1].id""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"categories_1_name = ""categories[1].name""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"categories_1_link = ""categories[1].link""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"categories_1_linkType = ""categories[1].linkType""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"categories_1_parentCategoryName = ""categories[1].parentCategoryName""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"products_0_online = ""products[0].online""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_link = ""products[0].link""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"products_0_linkType = ""products[0].linkType""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_productId = ""products[0].productId""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_productName = ""products[0].productName""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"products_0_productDesc = ""products[0].productDesc""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"products_0_productType = ""products[0].productType""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"products_0_basePrice_value = ""products[0].basePrice.value""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_basePrice_currency = ""products[0].basePrice.currency""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"products_0_basePrice_formatted = ""products[0].basePrice.formatted""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_basePrice_decimalPrice = ""products[0].basePrice.decimalPrice""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"products_0_salePrice_value = ""products[0].salePrice.value""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_salePrice_currency = ""products[0].salePrice.currency""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_salePrice_formatted = ""products[0].salePrice.formatted""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"products_0_salePrice_decimalPrice = ""products[0].salePrice.decimalPrice""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_image_0_alt = ""products[0].image[0].alt""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.001s,PASSED
+"products_0_image_0_url = ""products[0].image[0].url""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_image_0_title = ""products[0].image[0].title""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_discount_percentage = ""products[0].discount_percentage""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"products_0_isVariant = ""products[0].isVariant""",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.000s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, categories_0_id)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, categories_0_id)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.031s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, categories_0_name)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.037s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, categories_0_name)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.036s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, categories_0_link)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.037s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, categories_0_link)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.041s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, categories_0_linkType)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, categories_0_linkType)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.045s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, categories_0_parentCategoryName)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, categories_0_parentCategoryName)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, categories_1_id)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, categories_1_id)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, categories_1_name)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, categories_1_name)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, categories_1_link)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, categories_1_link)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, categories_1_linkType)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.046s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, categories_1_linkType)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.056s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, categories_1_parentCategoryName)",,,,26-07-2024 17:58:11,26-07-2024 17:58:11,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, categories_1_parentCategoryName)",,,,26-07-2024 17:58:11,26-07-2024 17:58:12,0.039s,PASSED
+"totalplay.Common.getBooleanValueofObject(PLPSearch, products_0_online)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.051s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_link)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_link)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.045s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_linkType)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_linkType)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_productId)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_productId)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.049s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_productName)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.049s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_productName)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_productDesc)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_productDesc)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_productType)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_productType)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.038s,PASSED
+"totalplay.Common.getNumValueofObject(PLPSearch, products_0_basePrice_value)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_basePrice_currency)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_basePrice_currency)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_basePrice_formatted)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_basePrice_formatted)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_basePrice_decimalPrice)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_basePrice_decimalPrice)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.038s,PASSED
+"totalplay.Common.getNumValueofObject(PLPSearch, products_0_salePrice_value)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(PLPSearch, products_0_salePrice_currency)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(PLPSearch, products_0_salePrice_formatted)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(PLPSearch, products_0_salePrice_decimalPrice)",,,,26-07-2024 17:58:12,26-07-2024 17:58:12,0.042s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_image_0_alt)",,,,26-07-2024 17:58:12,26-07-2024 17:58:13,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_image_0_alt)",,,,26-07-2024 17:58:13,26-07-2024 17:58:13,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_image_0_url)",,,,26-07-2024 17:58:13,26-07-2024 17:58:13,0.036s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_image_0_url)",,,,26-07-2024 17:58:13,26-07-2024 17:58:13,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(PLPSearch, products_0_image_0_title)",,,,26-07-2024 17:58:13,26-07-2024 17:58:13,0.037s,PASSED
+"totalplay.Common.verifyPropertyValueExist(PLPSearch, products_0_image_0_title)",,,,26-07-2024 17:58:13,26-07-2024 17:58:13,0.037s,PASSED
+"totalplay.Common.getNumValueofObject(PLPSearch, products_0_discount_percentage)",,,,26-07-2024 17:58:13,26-07-2024 17:58:13,0.047s,PASSED
+"totalplay.Common.getBooleanValueofObject(PLPSearch, products_0_isVariant)",,,,26-07-2024 17:58:13,26-07-2024 17:58:13,0.042s,PASSED
+,,,,,,,
+Test Cases/TotalPlay-Food/TC_10_Update_Customer_Address,,,,26-07-2024 17:58:13,26-07-2024 17:58:18,5.254s,PASSED
+"callTestCase(findTestCase(""TotalPlay-Food/TC_1_Login_Service""), [:], STOP_ON_FAILURE)",,,,26-07-2024 17:58:13,26-07-2024 17:58:17,3.827s,PASSED
+"UpdateAddress = sendRequest(findTestObject(""TotalPlay-Food/update customer address"", [""URL"":URL, ""CustomerID"":sla_customerId]))",,,,26-07-2024 17:58:17,26-07-2024 17:58:18,0.582s,PASSED
+"verifyResponseStatusCode(UpdateAddress, 200)",,,,26-07-2024 17:58:18,26-07-2024 17:58:18,0.002s,PASSED
+"GetAddress = sendRequest(findTestObject(""TotalPlay-Food/GetAddresses"", [""URL"":URL, ""sla_customerId"":sla_customerId, ""shop_auth_token"":shop_auth_token]))",,,,26-07-2024 17:58:18,26-07-2024 17:58:18,0.436s,PASSED
+"verifyResponseStatusCode(GetAddress, 200)",,,,26-07-2024 17:58:18,26-07-2024 17:58:18,0.003s,PASSED
+"addresses_postalCode = ""data[0].postal_code""",,,,26-07-2024 17:58:18,26-07-2024 17:58:18,0.000s,PASSED
+"PostalCode = getElementPropertyValue(GetAddress, addresses_postalCode)",,,,26-07-2024 17:58:18,26-07-2024 17:58:18,0.050s,PASSED
+"if (PostalCode == ""55120"")",,,,26-07-2024 17:58:18,26-07-2024 17:58:18,0.001s,PASSED
+,,,,,,,
+Test Cases/TotalPlay-Food/TC_11_Food_Add_To_Cart,,,,26-07-2024 17:58:18,26-07-2024 17:58:40,21.851s,PASSED
+"callTestCase(findTestCase(""TotalPlay-Food/TC_1_Login_Service""), [:], STOP_ON_FAILURE)",,,,26-07-2024 17:58:20,26-07-2024 17:58:24,3.367s,PASSED
+"AddToCart = sendRequest(findTestObject(""TotalPlay-Food/Food_Add to cart"", [""URL"":URL, ""basketID"":basketID]))",,,,26-07-2024 17:58:24,26-07-2024 17:58:30,6.719s,PASSED
+totalplay.Common.printResponseinText(AddToCart),,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.042s,PASSED
+"verifyResponseStatusCode(AddToCart, 200)",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.002s,PASSED
+"_v = ""_v""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"_type = ""_type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"_resource_state = ""_resource_state""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"adjusted_merchandize_total_tax = ""adjusted_merchandize_total_tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"adjusted_shipping_total_tax = ""adjusted_shipping_total_tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"agent_basket = ""agent_basket""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"basket_id = ""basket_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address__type = ""billing_address._type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_address1 = ""billing_address.address1""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_city = ""billing_address.city""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_country_code = ""billing_address.country_code""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"billing_address_first_name = ""billing_address.first_name""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_full_name = ""billing_address.full_name""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"billing_address_id = ""billing_address.id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_last_name = ""billing_address.last_name""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"billing_address_phone = ""billing_address.phone""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"billing_address_postal_code = ""billing_address.postal_code""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_c_alias = ""billing_address.c_alias""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"billing_address_c_delegation = ""billing_address.c_delegation""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_c_label = ""billing_address.c_label""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_c_latitude = ""billing_address.c_latitude""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"billing_address_c_longitude = ""billing_address.c_longitude""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_c_nExt = ""billing_address.c_nExt""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_c_neighborhood = ""billing_address.c_neighborhood""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"billing_address_c_references = ""billing_address.c_references""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"billing_address_c_rfc = ""billing_address.c_rfc""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"billing_address_c_state = ""billing_address.c_state""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"billing_address_c_streetName = ""billing_address.c_streetName""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"channel_type = ""channel_type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"creation_date = ""creation_date""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"currency = ""currency""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"customer_info__type = ""customer_info._type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"customer_info_customer_id = ""customer_info.customer_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"customer_info_customer_no = ""customer_info.customer_no""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"customer_info_email = ""customer_info.email""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"last_modified = ""last_modified""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"merchandize_total_tax = ""merchandize_total_tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"notes__type = ""notes._type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"notes_link = ""notes.link""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"order_total = ""order_total""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"payment_instruments_0__type = ""payment_instruments[0]._type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"payment_instruments_0_amount = ""payment_instruments[0].amount""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"payment_instruments_0_payment_instrument_id = ""payment_instruments[0].payment_instrument_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"payment_instruments_0_payment_method_id = ""payment_instruments[0].payment_method_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0__type = ""product_items[0]._type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_adjusted_tax = ""product_items[0].adjusted_tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_base_price = ""product_items[0].base_price""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_bonus_product_line_item = ""product_items[0].bonus_product_line_item""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"product_items_0_gift = ""product_items[0].gift""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_inventory_id = ""product_items[0].inventory_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_item_id = ""product_items[0].item_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_item_text = ""product_items[0].item_text""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_price = ""product_items[0].price""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_price_after_item_discount = ""product_items[0].price_after_item_discount""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"product_items_0_price_after_order_discount = ""product_items[0].price_after_order_discount""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_product_id = ""product_items[0].product_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_product_name = ""product_items[0].product_name""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"product_items_0_quantity = ""product_items[0].quantity""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_shipment_id = ""product_items[0].shipment_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_tax = ""product_items[0].tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"product_items_0_tax_basis = ""product_items[0].tax_basis""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_tax_class_id = ""product_items[0].tax_class_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_tax_rate = ""product_items[0].tax_rate""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_fromStoreId = ""product_items[0].c_fromStoreId""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"product_items_0_c_miraklChannels = ""product_items[0].c_miraklChannels""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_miraklOperatorProductId = ""product_items[0].c_miraklOperatorProductId""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"product_items_0_c_miraklShippingTaxes = ""product_items[0].c_miraklShippingTaxes""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_miraklTaxes = ""product_items[0].c_miraklTaxes""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_offerId = ""product_items[0].c_offerId""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"product_items_0_c_offerSalesPrice = ""product_items[0].c_offerSalesPrice""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_offerState = ""product_items[0].c_offerState""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_offerStateCode = ""product_items[0].c_offerStateCode""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_shopId = ""product_items[0].c_shopId""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_shopName = ""product_items[0].c_shopName""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_priceWithComplement = ""product_items[0].c_priceWithComplement""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_imagesData_large_0_alt = ""product_items[0].c_imagesData.large[0].alt""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_imagesData_large_0_url = ""product_items[0].c_imagesData.large[0].url""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"product_items_0_c_imagesData_large_0_title = ""product_items[0].c_imagesData.large[0].title""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_items_0_c_description = ""product_items[0].c_description""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_sub_total = ""product_sub_total""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"product_total = ""product_total""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"shipments_0__type = ""shipments[0]._type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_adjusted_merchandize_total_tax = ""shipments[0].adjusted_merchandize_total_tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"shipments_0_adjusted_shipping_total_tax = ""shipments[0].adjusted_shipping_total_tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_gift = ""shipments[0].gift""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_merchandize_total_tax = ""shipments[0].merchandize_total_tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_product_sub_total = ""shipments[0].product_sub_total""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_product_total = ""shipments[0].product_total""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipment_id = ""shipments[0].shipment_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipment_total = ""shipments[0].shipment_total""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address__type = ""shipments[0].shipping_address._type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"shipments_0_shipping_address_address1 = ""shipments[0].shipping_address.address1""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_city = ""shipments[0].shipping_address.city""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_country_code = ""shipments[0].shipping_address.country_code""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_first_name = ""shipments[0].shipping_address.first_name""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_full_name = ""shipments[0].shipping_address.full_name""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_id = ""shipments[0].shipping_address.id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"shipments_0_shipping_address_last_name = ""shipments[0].shipping_address.last_name""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_phone = ""shipments[0].shipping_address.phone""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_postal_code = ""shipments[0].shipping_address.postal_code""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_c_alias = ""shipments[0].shipping_address.c_alias""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_c_delegation = ""shipments[0].shipping_address.c_delegation""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_c_label = ""shipments[0].shipping_address.c_label""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_c_latitude = ""shipments[0].shipping_address.c_latitude""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"shipments_0_shipping_address_c_longitude = ""shipments[0].shipping_address.c_longitude""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_c_nExt = ""shipments[0].shipping_address.c_nExt""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_c_neighborhood = ""shipments[0].shipping_address.c_neighborhood""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"shipments_0_shipping_address_c_references = ""shipments[0].shipping_address.c_references""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_c_rfc = ""shipments[0].shipping_address.c_rfc""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_c_state = ""shipments[0].shipping_address.c_state""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_address_c_streetName = ""shipments[0].shipping_address.c_streetName""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_method__type = ""shipments[0].shipping_method._type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_method_description = ""shipments[0].shipping_method.description""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_method_id = ""shipments[0].shipping_method.id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_method_name = ""shipments[0].shipping_method.name""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_method_shipping_promotions_0__type = ""shipments[0].shipping_method.shipping_promotions[0]._type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_method_shipping_promotions_0_callout_msg = ""shipments[0].shipping_method.shipping_promotions[0].callout_msg""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_method_shipping_promotions_0_link = ""shipments[0].shipping_method.shipping_promotions[0].link""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_method_shipping_promotions_0_promotion_id = ""shipments[0].shipping_method.shipping_promotions[0].promotion_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_method_shipping_promotions_0_promotion_name = ""shipments[0].shipping_method.shipping_promotions[0].promotion_name""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"shipments_0_shipping_status = ""shipments[0].shipping_status""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_shipping_total = ""shipments[0].shipping_total""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"shipments_0_shipping_total_tax = ""shipments[0].shipping_total_tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_tax_total = ""shipments[0].tax_total""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_c_serviceCharge = ""shipments[0].c_serviceCharge""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_c_shippingRates = ""shipments[0].c_shippingRates""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipments_0_c_totalShippingCost = ""shipments[0].c_totalShippingCost""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipping_items_0__type = ""shipping_items[0]._type""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipping_items_0_adjusted_tax = ""shipping_items[0].adjusted_tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipping_items_0_base_price = ""shipping_items[0].base_price""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipping_total = ""shipping_total""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"shipping_total_tax = ""shipping_total_tax""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"taxation = ""taxation""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"tax_rounded_at_group = ""tax_rounded_at_group""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"tax_total = ""tax_total""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"temporary_basket = ""temporary_basket""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"c_currentCorporate = ""c_currentCorporate""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"c_forceDeleteOndemand = ""c_forceDeleteOndemand""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"c_isLock = ""c_isLock""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"c_isMiraklOrder = ""c_isMiraklOrder""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"c_lockTime = ""c_lockTime""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"c_miraklShippingZoneCode = ""c_miraklShippingZoneCode""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.001s,PASSED
+"c_pickerExpressShipment = ""c_pickerExpressShipment""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"c_seller_id = ""c_seller_id""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"c_serviceChargeTotalGrossPrice = ""c_serviceChargeTotalGrossPrice""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"c_savingsTotal = ""c_savingsTotal""",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.000s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, _v)",,,,26-07-2024 17:58:30,26-07-2024 17:58:30,0.074s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, _v)",,,,26-07-2024 17:58:30,26-07-2024 17:58:31,0.064s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, _type)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.059s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, _type)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.055s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, _resource_state)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.051s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, _resource_state)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.053s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, adjusted_merchandize_total_tax)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.033s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, adjusted_shipping_total_tax)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.033s,PASSED
+"totalplay.Common.getBooleanValueofObject(AddToCart, agent_basket)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, basket_id)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.036s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, basket_id)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, billing_address__type)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.069s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, billing_address__type)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.062s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, billing_address_address1)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.036s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, billing_address_address1)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, billing_address_city)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.037s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, billing_address_city)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, billing_address_country_code)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, billing_address_country_code)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.041s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, billing_address_first_name)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.047s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, billing_address_first_name)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, billing_address_full_name)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.037s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, billing_address_full_name)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, channel_type)",,,,26-07-2024 17:58:31,26-07-2024 17:58:31,0.044s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, channel_type)",,,,26-07-2024 17:58:31,26-07-2024 17:58:32,0.045s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, creation_date)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.046s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, creation_date)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.043s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, currency)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.045s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, currency)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.047s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, customer_info__type)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.074s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, customer_info__type)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.069s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, customer_info_customer_id)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, customer_info_customer_id)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.043s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, customer_info_customer_no)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, customer_info_customer_no)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.042s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, customer_info_email)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.041s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, customer_info_email)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, last_modified)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, last_modified)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.044s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, merchandize_total_tax)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.042s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, notes__type)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.089s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, notes__type)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.071s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, notes_link)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.043s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, notes_link)",,,,26-07-2024 17:58:32,26-07-2024 17:58:32,0.045s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, order_total)",,,,26-07-2024 17:58:32,26-07-2024 17:58:33,0.060s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, payment_instruments_0__type)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.050s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, payment_instruments_0__type)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.064s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, payment_instruments_0_amount)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.048s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, payment_instruments_0_payment_instrument_id)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.048s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, payment_instruments_0_payment_instrument_id)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.056s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, payment_instruments_0_payment_method_id)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.051s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, payment_instruments_0_payment_method_id)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.053s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0__type)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.048s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0__type)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.050s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_items_0_adjusted_tax)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.057s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_items_0_base_price)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.047s,PASSED
+"totalplay.Common.getBooleanValueofObject(AddToCart, product_items_0_bonus_product_line_item)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.045s,PASSED
+"totalplay.Common.getBooleanValueofObject(AddToCart, product_items_0_gift)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.051s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_inventory_id)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.047s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_inventory_id)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.046s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_item_id)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.050s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_item_id)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.057s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_item_text)",,,,26-07-2024 17:58:33,26-07-2024 17:58:33,0.055s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_item_text)",,,,26-07-2024 17:58:33,26-07-2024 17:58:34,0.063s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_items_0_price)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.050s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_items_0_price_after_item_discount)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.048s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_items_0_price_after_order_discount)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.046s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_product_id)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.046s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_product_id)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.047s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_product_name)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.046s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_product_name)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.046s,PASSED
+"totalplay.Common.getNumValueofObject(AddToCart, product_items_0_quantity)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.048s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_shipment_id)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.046s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_shipment_id)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.044s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_items_0_tax)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.055s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_items_0_tax_basis)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.043s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_tax_class_id)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.043s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_tax_class_id)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.043s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_items_0_tax_rate)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.042s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_fromStoreId)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.041s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_fromStoreId)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.041s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_miraklChannels)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_miraklChannels)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_miraklOperatorProductId)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.041s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_miraklOperatorProductId)",,,,26-07-2024 17:58:34,26-07-2024 17:58:34,0.046s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_miraklShippingTaxes)",,,,26-07-2024 17:58:34,26-07-2024 17:58:35,0.044s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_miraklShippingTaxes)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.045s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_miraklTaxes)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.043s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_miraklTaxes)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.043s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_offerId)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.043s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_offerId)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.044s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_items_0_c_offerSalesPrice)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.047s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_offerState)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.048s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_offerState)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.044s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_offerStateCode)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.054s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_offerStateCode)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.043s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_shopId)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.043s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_shopId)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.045s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_shopName)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.043s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_shopName)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.042s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_items_0_c_priceWithComplement)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.042s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_imagesData_large_0_alt)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.043s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_imagesData_large_0_alt)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueEmptyString(AddToCart, product_items_0_c_imagesData_large_0_url)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.054s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_imagesData_large_0_title)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.041s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_imagesData_large_0_title)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.041s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, product_items_0_c_description)",,,,26-07-2024 17:58:35,26-07-2024 17:58:35,0.041s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, product_items_0_c_description)",,,,26-07-2024 17:58:35,26-07-2024 17:58:36,0.044s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_sub_total)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.042s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, product_total)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.041s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0__type)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.043s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0__type)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.048s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_adjusted_merchandize_total_tax)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.050s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_adjusted_shipping_total_tax)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.043s,PASSED
+"totalplay.Common.getBooleanValueofObject(AddToCart, shipments_0_gift)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.046s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_merchandize_total_tax)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.047s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_product_sub_total)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.045s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_product_total)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.045s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipment_id)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.058s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipment_id)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.044s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_shipment_total)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.044s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address__type)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address__type)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_address1)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_address1)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_city)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.041s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_city)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.041s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_country_code)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_country_code)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_first_name)",,,,26-07-2024 17:58:36,26-07-2024 17:58:36,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_first_name)",,,,26-07-2024 17:58:36,26-07-2024 17:58:37,0.052s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_first_name)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_first_name)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_full_name)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.044s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_full_name)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.045s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_id)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_id)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_last_name)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_last_name)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.042s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_phone)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_phone)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.043s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_postal_code)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.041s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_postal_code)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_alias)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.045s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_alias)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_delegation)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_delegation)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.041s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_label)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_label)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_latitude)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_latitude)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_longitude)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_longitude)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_nExt)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_nExt)",,,,26-07-2024 17:58:37,26-07-2024 17:58:37,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_neighborhood)",,,,26-07-2024 17:58:37,26-07-2024 17:58:38,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_neighborhood)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.036s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_references)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_references)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.046s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_state)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_state)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_streetName)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_streetName)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.041s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_address_c_rfc)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.041s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_address_c_rfc)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_method__type)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_method__type)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_method_description)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_method_description)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_method_id)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_method_id)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_method_name)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_method_name)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.046s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_method_shipping_promotions_0__type)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_method_shipping_promotions_0__type)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_method_shipping_promotions_0_callout_msg)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.037s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_method_shipping_promotions_0_callout_msg)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_method_shipping_promotions_0_link)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.036s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_method_shipping_promotions_0_link)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_method_shipping_promotions_0_promotion_id)",,,,26-07-2024 17:58:38,26-07-2024 17:58:38,0.042s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_method_shipping_promotions_0_link)",,,,26-07-2024 17:58:38,26-07-2024 17:58:39,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_method_shipping_promotions_0_promotion_name)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.037s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_method_shipping_promotions_0_promotion_name)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.048s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_shipping_status)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_shipping_status)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.037s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_shipping_total)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.050s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_shipping_total_tax)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.037s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_tax_total)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.038s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_c_serviceCharge)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.038s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipments_0_c_shippingRates)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipments_0_c_shippingRates)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.042s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipments_0_c_totalShippingCost)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, shipping_items_0__type)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, shipping_items_0__type)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.039s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipping_items_0_adjusted_tax)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.039s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipping_items_0_adjusted_tax)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.042s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipping_total)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.039s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, shipping_total_tax)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, taxation)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.039s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, taxation)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.038s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, tax_total)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.039s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, c_currentCorporate)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.037s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, c_currentCorporate)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.037s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, c_miraklShippingZoneCode)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.038s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, c_miraklShippingZoneCode)",,,,26-07-2024 17:58:39,26-07-2024 17:58:39,0.037s,PASSED
+"totalplay.Common.getBooleanValueofObject(AddToCart, tax_rounded_at_group)",,,,26-07-2024 17:58:39,26-07-2024 17:58:40,0.037s,PASSED
+"totalplay.Common.getBooleanValueofObject(AddToCart, temporary_basket)",,,,26-07-2024 17:58:40,26-07-2024 17:58:40,0.038s,PASSED
+"totalplay.Common.getBooleanValueofObject(AddToCart, c_forceDeleteOndemand)",,,,26-07-2024 17:58:40,26-07-2024 17:58:40,0.037s,PASSED
+"totalplay.Common.getBooleanValueofObject(AddToCart, c_isLock)",,,,26-07-2024 17:58:40,26-07-2024 17:58:40,0.039s,PASSED
+"totalplay.Common.getBooleanValueofObject(AddToCart, c_isMiraklOrder)",,,,26-07-2024 17:58:40,26-07-2024 17:58:40,0.040s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, c_pickerExpressShipment)",,,,26-07-2024 17:58:40,26-07-2024 17:58:40,0.041s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, c_pickerExpressShipment)",,,,26-07-2024 17:58:40,26-07-2024 17:58:40,0.043s,PASSED
+"totalplay.Common.verifyPropertyExist(AddToCart, c_seller_id)",,,,26-07-2024 17:58:40,26-07-2024 17:58:40,0.040s,PASSED
+"totalplay.Common.verifyPropertyValueExist(AddToCart, c_seller_id)",,,,26-07-2024 17:58:40,26-07-2024 17:58:40,0.052s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, c_serviceChargeTotalGrossPrice)",,,,26-07-2024 17:58:40,26-07-2024 17:58:40,0.058s,PASSED
+"totalplay.Common.getDecimalValueofObject(AddToCart, c_savingsTotal)",,,,26-07-2024 17:58:40,26-07-2024 17:58:40,0.042s,PASSED

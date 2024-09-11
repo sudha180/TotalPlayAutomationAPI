@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_19_Set Payment instruments - Credit Card</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>aeaa9530-2e39-4a6a-b5f1-71df97f1b24b</testCaseGuid>
+</TestCaseEntity>

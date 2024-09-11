@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_20_Food TP - Credit Card</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>054b8de3-9457-4389-8d87-5ad99b4deb5e</testCaseGuid>
+</TestCaseEntity>

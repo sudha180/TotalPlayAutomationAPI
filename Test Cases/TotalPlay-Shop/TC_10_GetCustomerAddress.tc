@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_10_GetCustomerAddress</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>80c5a44d-24d0-4b41-a6fe-0dd2f1f79ae7</testCaseGuid>
+</TestCaseEntity>

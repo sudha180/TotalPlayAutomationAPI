@@ -1,0 +1,4 @@
+ "companyName": "",   works for verifyPropertyValueExist
+  "appliedOrderPromotions": [],  works for verifyPropertyEmpty
+ 
+ 

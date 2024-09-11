@@ -1,0 +1,407 @@
+{
+    "_v": "23.1",
+    "_type": "basket",
+    "_resource_state": "8c77172a2829404b9384fdafb6de32decfc92db3ea0d9bc69a909db05608fbc9",
+    "_flash": [
+        {
+            "_type": "flash",
+            "type": "PaymentMethodRequired",
+            "message": "No payment method ID was specified. Please provide a valid payment method ID.",
+            "path": "$.payment_instruments[0].payment_method_id"
+        },
+        {
+            "_type": "flash",
+            "type": "BillingAddressRequired",
+            "message": "No billing address was specified. Please provide a valid billing address.",
+            "path": "$.billing_address"
+        },
+        {
+            "_type": "flash",
+            "type": "ShippingAddressRequired",
+            "message": "No shipping address was specified. Please provide a valid shipping address.",
+            "path": "$.shipments[0].shipping_address",
+            "details": {
+                "shipmentId": "me"
+            }
+        }
+    ],
+    "adjusted_merchandize_total_tax": 0.00,
+    "adjusted_shipping_total_tax": 0.00,
+    "agent_basket": false,
+    "basket_id": "6659e4a1dc2af8bb9f2db9e771",
+    "channel_type": "storefront",
+    "creation_date": "2024-04-02T15:39:01.373Z",
+    "currency": "MXN",
+    "customer_info": {
+        "_type": "customer_info",
+        "customer_id": "abW2wVGfePjliED7k8CQdTr5fs",
+        "customer_no": "0190057583",
+        "email": ""
+    },
+    "last_modified": "2024-04-02T16:53:03.118Z",
+    "merchandize_total_tax": 0.00,
+    "notes": {
+        "_type": "simple_link",
+        "link": "https://salesforceqa.sistemastp.com.mx/s/TP-FOOD/dw/shop/v23_1/baskets/6659e4a1dc2af8bb9f2db9e771/notes"
+    },
+    "order_total": 300.00,
+    "product_items": [
+        {
+            "_type": "product_item",
+            "adjusted_tax": 0.00,
+            "base_price": 85.00,
+            "bonus_product_line_item": false,
+            "gift": false,
+            "inventory_id": "inventory_m_food_mirakl",
+            "item_id": "58405e8b691970d782569ae998",
+            "item_text": "Café Americano",
+            "price": 85.00,
+            "price_adjustments": [
+                {
+                    "_type": "price_adjustment",
+                    "applied_discount": {
+                        "_type": "discount",
+                        "amount": 10.0,
+                        "type": "amount"
+                    },
+                    "creation_date": "2024-04-02T16:53:02.330Z",
+                    "custom": false,
+                    "item_text": "10$ descuento fijo",
+                    "last_modified": "2024-04-02T16:53:03.118Z",
+                    "manual": false,
+                    "price": -10.00,
+                    "price_adjustment_id": "30cbe96ca669c5312199dc9bf9",
+                    "promotion_id": "10$ OFF",
+                    "promotion_link": "https://salesforceqa.sistemastp.com.mx/s/TP-FOOD/dw/shop/v23_1/promotions/10$%20OFF"
+                }
+            ],
+            "price_after_item_discount": 75.00,
+            "price_after_order_discount": 75.00,
+            "product_id": "C706884490",
+            "product_name": "Café Americano",
+            "quantity": 1,
+            "shipment_id": "me",
+            "tax": 0.00,
+            "tax_basis": 85.00,
+            "tax_class_id": "product_zero_tax",
+            "tax_rate": 0.0,
+            "c_fromStoreId": "2073",
+            "c_miraklChannels": "[\"INIT\"]",
+            "c_miraklOperatorProductId": "C706884490",
+            "c_miraklShippingTaxes": "[{\"amount\":null,\"type\":\"product_zero_tax\",\"isTaxRate\":true,\"rate\":0}]",
+            "c_miraklTaxes": "[{\"amount\":0,\"type\":\"product_zero_tax\",\"isTaxRate\":true,\"rate\":0}]",
+            "c_offerId": "8227",
+            "c_offerListPrice": 90.0,
+            "c_offerSalesPrice": 85.0,
+            "c_offerState": "Nuevo",
+            "c_offerStateCode": "11",
+            "c_shopId": "2073",
+            "c_shopName": "Burger King Santa Fe",
+            "c_imagesData": {
+                "large": [
+                    {
+                        "alt": "Café Americano",
+                        "url": "https://salesforceqa.sistemastp.com.mx/on/demandware.static/Sites-TP-FOOD-Site/-/default/dw23cb6047/images/noimagelarge.png",
+                        "title": "Café Americano"
+                    }
+                ]
+            },
+            "c_description": "C, M, G/ sin azucar o con azucar",
+            "c_availableQty": "900"
+        },
+        {
+            "_type": "product_item",
+            "adjusted_tax": 0.00,
+            "base_price": 85.00,
+            "bonus_product_line_item": false,
+            "gift": false,
+            "inventory_id": "inventory_m_food_mirakl",
+            "item_id": "537233012bdde08f3411d8542f",
+            "item_text": "Café Americano",
+            "price": 85.00,
+            "price_adjustments": [
+                {
+                    "_type": "price_adjustment",
+                    "applied_discount": {
+                        "_type": "discount",
+                        "amount": 10.0,
+                        "type": "amount"
+                    },
+                    "creation_date": "2024-04-02T16:53:02.331Z",
+                    "custom": false,
+                    "item_text": "10$ descuento fijo",
+                    "last_modified": "2024-04-02T16:53:03.118Z",
+                    "manual": false,
+                    "price": -10.00,
+                    "price_adjustment_id": "a46e4833c9cd43b301fafb29f1",
+                    "promotion_id": "10$ OFF",
+                    "promotion_link": "https://salesforceqa.sistemastp.com.mx/s/TP-FOOD/dw/shop/v23_1/promotions/10$%20OFF"
+                }
+            ],
+            "price_after_item_discount": 75.00,
+            "price_after_order_discount": 75.00,
+            "product_id": "C706884490",
+            "product_name": "Café Americano",
+            "quantity": 1,
+            "shipment_id": "me",
+            "tax": 0.00,
+            "tax_basis": 85.00,
+            "tax_class_id": "product_zero_tax",
+            "tax_rate": 0.0,
+            "c_fromStoreId": "2073",
+            "c_miraklChannels": "[\"INIT\"]",
+            "c_miraklOperatorProductId": "C706884490",
+            "c_miraklShippingTaxes": "[{\"amount\":null,\"type\":\"product_zero_tax\",\"isTaxRate\":true,\"rate\":0}]",
+            "c_miraklTaxes": "[{\"amount\":0,\"type\":\"product_zero_tax\",\"isTaxRate\":true,\"rate\":0}]",
+            "c_offerId": "8227",
+            "c_offerListPrice": 90.0,
+            "c_offerSalesPrice": 85.0,
+            "c_offerState": "Nuevo",
+            "c_offerStateCode": "11",
+            "c_shopId": "2073",
+            "c_shopName": "Burger King Santa Fe",
+            "c_imagesData": {
+                "large": [
+                    {
+                        "alt": "Café Americano",
+                        "url": "https://salesforceqa.sistemastp.com.mx/on/demandware.static/Sites-TP-FOOD-Site/-/default/dw23cb6047/images/noimagelarge.png",
+                        "title": "Café Americano"
+                    }
+                ]
+            },
+            "c_description": "C, M, G/ sin azucar o con azucar",
+            "c_availableQty": "900"
+        },
+        {
+            "_type": "product_item",
+            "adjusted_tax": 0.00,
+            "base_price": 85.00,
+            "bonus_product_line_item": false,
+            "gift": false,
+            "inventory_id": "inventory_m_food_mirakl",
+            "item_id": "582fdd9f83ce5f0eaac75e5081",
+            "item_text": "Café Americano",
+            "price": 85.00,
+            "price_adjustments": [
+                {
+                    "_type": "price_adjustment",
+                    "applied_discount": {
+                        "_type": "discount",
+                        "amount": 10.0,
+                        "type": "amount"
+                    },
+                    "creation_date": "2024-04-02T16:53:02.331Z",
+                    "custom": false,
+                    "item_text": "10$ descuento fijo",
+                    "last_modified": "2024-04-02T16:53:03.118Z",
+                    "manual": false,
+                    "price": -10.00,
+                    "price_adjustment_id": "94ba4a179a05150f1a90b9fef2",
+                    "promotion_id": "10$ OFF",
+                    "promotion_link": "https://salesforceqa.sistemastp.com.mx/s/TP-FOOD/dw/shop/v23_1/promotions/10$%20OFF"
+                }
+            ],
+            "price_after_item_discount": 75.00,
+            "price_after_order_discount": 75.00,
+            "product_id": "C706884490",
+            "product_name": "Café Americano",
+            "quantity": 1,
+            "shipment_id": "me",
+            "tax": 0.00,
+            "tax_basis": 85.00,
+            "tax_class_id": "product_zero_tax",
+            "tax_rate": 0.0,
+            "c_fromStoreId": "2073",
+            "c_miraklChannels": "[\"INIT\"]",
+            "c_miraklOperatorProductId": "C706884490",
+            "c_miraklShippingTaxes": "[{\"amount\":null,\"type\":\"product_zero_tax\",\"isTaxRate\":true,\"rate\":0}]",
+            "c_miraklTaxes": "[{\"amount\":0,\"type\":\"product_zero_tax\",\"isTaxRate\":true,\"rate\":0}]",
+            "c_offerId": "8227",
+            "c_offerListPrice": 90.0,
+            "c_offerSalesPrice": 85.0,
+            "c_offerState": "Nuevo",
+            "c_offerStateCode": "11",
+            "c_shopId": "2073",
+            "c_shopName": "Burger King Santa Fe",
+            "c_imagesData": {
+                "large": [
+                    {
+                        "alt": "Café Americano",
+                        "url": "https://salesforceqa.sistemastp.com.mx/on/demandware.static/Sites-TP-FOOD-Site/-/default/dw23cb6047/images/noimagelarge.png",
+                        "title": "Café Americano"
+                    }
+                ]
+            },
+            "c_description": "C, M, G/ sin azucar o con azucar",
+            "c_availableQty": "900"
+        },
+        {
+            "_type": "product_item",
+            "adjusted_tax": 0.00,
+            "base_price": 85.00,
+            "bonus_product_line_item": false,
+            "gift": false,
+            "inventory_id": "inventory_m_food_mirakl",
+            "item_id": "1838e9e8daa1722e5fa744b34d",
+            "item_text": "Café Americano",
+            "price": 85.00,
+            "price_adjustments": [
+                {
+                    "_type": "price_adjustment",
+                    "applied_discount": {
+                        "_type": "discount",
+                        "amount": 10.0,
+                        "type": "amount"
+                    },
+                    "creation_date": "2024-04-02T16:53:02.331Z",
+                    "custom": false,
+                    "item_text": "10$ descuento fijo",
+                    "last_modified": "2024-04-02T16:53:03.118Z",
+                    "manual": false,
+                    "price": -10.00,
+                    "price_adjustment_id": "d3b333c359d67897b23dbd720e",
+                    "promotion_id": "10$ OFF",
+                    "promotion_link": "https://salesforceqa.sistemastp.com.mx/s/TP-FOOD/dw/shop/v23_1/promotions/10$%20OFF"
+                }
+            ],
+            "price_after_item_discount": 75.00,
+            "price_after_order_discount": 75.00,
+            "product_id": "C706884490",
+            "product_name": "Café Americano",
+            "quantity": 1,
+            "shipment_id": "me",
+            "tax": 0.00,
+            "tax_basis": 85.00,
+            "tax_class_id": "product_zero_tax",
+            "tax_rate": 0.0,
+            "c_comment": "Hello World",
+            "c_fromStoreId": "2073",
+            "c_miraklChannels": "[\"INIT\"]",
+            "c_miraklOperatorProductId": "C706884490",
+            "c_miraklShippingTaxes": "[{\"amount\":null,\"type\":\"product_zero_tax\",\"isTaxRate\":true,\"rate\":0}]",
+            "c_miraklTaxes": "[{\"amount\":0,\"type\":\"product_zero_tax\",\"isTaxRate\":true,\"rate\":0}]",
+            "c_offerId": "8227",
+            "c_offerListPrice": 90.0,
+            "c_offerSalesPrice": 85.0,
+            "c_offerState": "Nuevo",
+            "c_offerStateCode": "11",
+            "c_shopId": "2073",
+            "c_shopName": "Burger King Santa Fe",
+            "c_totalPrice": "85.0",
+            "c_imagesData": {
+                "large": [
+                    {
+                        "alt": "Café Americano",
+                        "url": "https://salesforceqa.sistemastp.com.mx/on/demandware.static/Sites-TP-FOOD-Site/-/default/dw23cb6047/images/noimagelarge.png",
+                        "title": "Café Americano"
+                    }
+                ]
+            },
+            "c_description": "C, M, G/ sin azucar o con azucar",
+            "c_availableQty": "900"
+        }
+    ],
+    "product_sub_total": 300.00,
+    "product_total": 300.00,
+    "shipments": [
+        {
+            "_type": "shipment",
+            "adjusted_merchandize_total_tax": 0.00,
+            "adjusted_shipping_total_tax": 0.00,
+            "gift": false,
+            "merchandize_total_tax": 0.00,
+            "product_sub_total": 300.00,
+            "product_total": 300.00,
+            "shipment_id": "me",
+            "shipment_total": 300.00,
+            "shipping_method": {
+                "_type": "shipping_method",
+                "description": "pickup",
+                "id": "pickup",
+                "name": "pickup",
+                "shipping_promotions": [
+                    {
+                        "_type": "shipping_promotion",
+                        "callout_msg": "Free shipping promo applied based on brand !!!!",
+                        "link": "https://salesforceqa.sistemastp.com.mx/s/TP-FOOD/dw/shop/v23_1/promotions/0ff8d88be43076041040b51f6b",
+                        "promotion_id": "FreeShippingForBrand",
+                        "promotion_name": "Free Shipping For Brand"
+                    },
+                    {
+                        "_type": "shipping_promotion",
+                        "callout_msg": "freeshipment 100",
+                        "link": "https://salesforceqa.sistemastp.com.mx/s/TP-FOOD/dw/shop/v23_1/promotions/1813aef0ba392b0168849a8089",
+                        "promotion_id": "FreeShippingAfterThreshold",
+                        "promotion_name": "Free Shipping After Order Amount Threshold"
+                    }
+                ],
+                "c_estimatedArrivalTime": "60 Mins",
+                "c_storePickupEnabled": false
+            },
+            "shipping_status": "not_shipped",
+            "shipping_total": 0.00,
+            "shipping_total_tax": 0.00,
+            "tax_total": 0.00
+        }
+    ],
+    "shipping_items": [
+        {
+            "_type": "shipping_item",
+            "adjusted_tax": 0.00,
+            "base_price": 0.00,
+            "item_id": "8695df55fc529e3bec5fb675e7",
+            "item_text": "Shipping",
+            "price": 0.00,
+            "price_after_item_discount": 0.00,
+            "shipment_id": "me",
+            "tax": 0.00,
+            "tax_basis": 0.00,
+            "tax_class_id": "standard",
+            "tax_rate": 0.0
+        }
+    ],
+    "shipping_total": 0.00,
+    "shipping_total_tax": 0.00,
+    "taxation": "net",
+    "tax_total": 0.00,
+    "c_commentToCart": "{\"subject\":\"prueba3\",\"text\":\"priema prueba para comentarioes en el carrito tercera prueba\"}",
+    "c_currentCorporate": "Burger King Santa Fe",
+    "c_seller_id": "2073",
+    "c_SellerList": [
+        {
+            "name": "18Seis",
+            "corporateName": "18Seis",
+            "corporateImgURL": "https://salesforceqa.sistemastp.com.mx/on/demandware.static/-/Sites/default/dwe300e0d9/images/seller/648923446.51913671931",
+            "sellerId": "6489",
+            "storeImgURL": "https://salesforceqa.sistemastp.com.mx/on/demandware.static/-/Sites/default/dwe300e0d9/images/seller/648923446.51913671931",
+            "productsCount": 1,
+            "cartItems": [
+                {
+                    "productID": "C1654283309",
+                    "sellerId": "6489",
+                    "isOnDemandStoreItem": true,
+                    "productImage": [],
+                    "quantity": 1.0,
+                    "name": "Fish Biryani (Full)"
+                }
+            ]
+        }
+    ],
+    "c_preferredAddress": "{\"address1\":\"Guanajuato\",\"address2\":null,\"city\":\"Ciudad de México\",\"firstName\":\"César Gerardo\",\"lastName\":\"Waldo\",\"phone\":\"5579660270\",\"postalCode\":\"55120\",\"states\":{\"stateCode\":null},\"country\":{},\"jobTitle\":null,\"postBox\":null,\"salutation\":null,\"secondName\":\"Gonz�lez\",\"companyName\":null,\"suffix\":null,\"suite\":null,\"title\":null}",
+    "c_corporateImgUrl": "https://salesforceqa.sistemastp.com.mx/on/demandware.static/-/Sites/default/dw4ea94918/images/seller/207363834.35044030925",
+    "c_corporateColorCode": "",
+    "c_OnDemandStoreOpenHours": {
+        "time": [
+            {
+                "openingTime": "00:01",
+                "closingTime": "23:59"
+            }
+        ],
+        "closed": false,
+        "day": "Martes"
+    },
+    "c_savingsTotal": 60.0,
+    "c_formatedSavingsTotal": "$60.00",
+    "c_formatedOrderTotal": "$300.00",
+    "c_formatedProductTotal": "$300.00"
+}
