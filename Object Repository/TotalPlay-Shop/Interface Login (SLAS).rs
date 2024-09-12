@@ -23,7 +23,7 @@
     },
     {
       &quot;name&quot;: &quot;brm_id&quot;,
-      &quot;value&quot;: &quot;0190063890&quot;,
+      &quot;value&quot;: &quot;${GlobalVariable.brm_id}&quot;,
       &quot;type&quot;: &quot;Text&quot;,
       &quot;contentType&quot;: &quot;&quot;
     }

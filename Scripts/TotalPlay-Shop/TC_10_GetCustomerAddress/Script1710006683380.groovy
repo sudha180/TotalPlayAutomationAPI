@@ -16,15 +16,18 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
+ 
 WebUI.callTestCase(findTestCase('TotalPlay-Shop/TC_1_InterfaceLogin'), [:], FailureHandling.STOP_ON_FAILURE)
-
+ 
 GetAddress_Response = WS.sendRequest(findTestObject('TotalPlay-Shop/Postman/Address/Get Customer Address', [('URL') : GlobalVariable.URL
-            , ('SITEID') : GlobalVariable.SITEID, ('sla_customerId') : GlobalVariable.sla_customerId]))
-
+			, ('SITEID') : GlobalVariable.SITEID, ('sla_customerId') : GlobalVariable.sla_customerId]))
+ 
 WS.verifyResponseStatusCode(GetAddress_Response,200)
-CustomKeywords.'totalplay.Common.printResponseinText'(GetAddress_Response)
-
+ 
+_v='_v'
+count='count'
+data_0_type='data[0]._type'
+data_0_resource_state='data[0]._resource_state'
 type = '_type'
 address1 = 'data[0].address1'
 address_id = 'data[0].address_id'
@@ -50,82 +53,178 @@ c_longitude = 'data[0].c_longitude'
 c_streetName = 'data[0].c_streetName'
 c_state = 'data[0].c_state'
 total = 'total'
-
+data_0_c_dateRegister	=	 'data[0].c_dateRegister'
+data_0_c_dateUpdate	=	 'data[0].c_dateUpdate'
+data_0_c_delegation	=	 'data[0].c_delegation'
+data_0_c_isDefault	=	 'data[0].c_isDefault'
+data_0_c_references	=	 'data[0].c_references'
+data_0_c_rfc	=	 'data[0].c_rfc'
+data_0_c_status	=	 'data[0].c_status'
+start	=	 'start'
+_v='_v'
+count='count'
+data_0_type='data[0]._type'
+data_0_resource_state='data[0]._resource_state'
+type = '_type'
+data_0_first_name	=	 'data[0].first_name'
+data_0_second_name	=	 'data[0].second_name'
+data_0_title	=	 'data[0].title'
+ 
+ 
+/*_v='_v'
+count='count'
+data_0_type='data[0]._type'
+data_0_resource_state='data[0]._resource_state'
+type = '_type'
+data_0_address_id	=	 'data[0].address_id'
+data_0_city	=	 'data[0].city'
+data_0_country_code	=	 'data[0].country_code'
+data_0_creation_date	=	 'data[0].creation_date'
+data_0_first_name	=	 'data[0].first_name'
+data_0_full_name	=	 'data[0].full_name'
+data_0_last_modified	=	 'data[0].last_modified'
+data_0_last_name	=	 'data[0].last_name'
+data_0_phone	=	 'data[0].phone'
+data_0_postal_code	=	 'data[0].postal_code'
+data_0_preferred	=	 'data[0].preferred'
+data_0_second_name	=	 'data[0].second_name'
+data_0_title	=	 'data[0].title'
+data_0_c_addressupdatedtime	=	 'data[0].c_addressupdatedtime'
+data_0_c_alias	=	 'data[0].c_alias'
+data_0_c_brmId	=	 'data[0].c_brmId'
+data_0_c_crm_address_id	=	 'data[0].c_crm_address_id'
+data_0_c_dateRegister	=	 'data[0].c_dateRegister'
+data_0_c_dateUpdate	=	 'data[0].c_dateUpdate'
+data_0_c_delegation	=	 'data[0].c_delegation'
+data_0_c_isBilling	=	 'data[0].c_isBilling'
+data_0_c_isContact	=	 'data[0].c_isContact'
+data_0_c_isDefault	=	 'data[0].c_isDefault'
+data_0_c_isShipping	=	 'data[0].c_isShipping'
+data_0_c_label	=	 'data[0].c_label'
+data_0_c_latitude	=	 'data[0].c_latitude'
+data_0_c_longitude	=	 'data[0].c_longitude'
+data_0_c_references	=	 'data[0].c_references'
+data_0_c_rfc	=	 'data[0].c_rfc'
+data_0_c_state	=	 'data[0].c_state'
+data_0_c_status	=	 'data[0].c_status'
+data_0_c_streetName	=	 'data[0].c_streetName'
+start	=	 'start'
+total	=	 'total'*/
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, _v)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, _v)
+ 
+CustomKeywords.'totalplay.Common.getNumValueofObject'(GetAddress_Response, count)
+ 
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_type)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_type)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_resource_state)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_resource_state)
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, type)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, type)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, address1)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, address1)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, address_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, address_id)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, city)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, city)
-
-//CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, company_name)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, company_name)
-
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, country_code)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, country_code)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, creation_date)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, creation_date)
-
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_first_name)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_first_name)
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, full_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, full_name)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, last_modified)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, last_modified)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, last_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, last_name)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, phone)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, phone)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, postal_code)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, postal_code)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(GetAddress_Response, preferred)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, preferred)
-
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_second_name)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_second_name)
+ 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_title)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_title)
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_alias)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_alias)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_brmId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_brmId)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_crm_address_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_crm_address_id)
-
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_c_dateRegister)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_c_dateRegister)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_c_dateUpdate)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_c_dateUpdate)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_c_delegation)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_c_delegation)
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_isBilling)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_isBilling)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_isContact)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_isContact)
-
+ 
+CustomKeywords.'totalplay.Common.getBooleanValueofObject'(GetAddress_Response, data_0_c_isDefault)
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_isShipping)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_isShipping)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_label)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_label)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_latitude)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_latitude)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_longitude)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_longitude)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_streetName)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_streetName)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, c_state)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, c_state)
-
+ 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(GetAddress_Response, total)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, total)
-
-
-
-
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_c_references)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_c_references)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_c_rfc)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_c_rfc)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_c_status)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_c_status)
+ 
+CustomKeywords.'totalplay.Common.getNumValueofObject'(GetAddress_Response, start)
+ 
+ 

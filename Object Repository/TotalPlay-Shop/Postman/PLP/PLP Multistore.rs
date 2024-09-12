@@ -5,7 +5,6 @@
    <tag></tag>
    <elementGuidId>3c28b038-f3d3-412b-a049-14655bea5d8a</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
-   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
       <authorizationInfo>
@@ -16,7 +15,6 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
-   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -33,7 +31,6 @@
    <katalonVersion>9.3.0</katalonVersion>
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <path></path>
    <restRequestMethod>GET</restRequestMethod>
    <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v23_1/content/seller-home-page-store?c_imageChannel=iptv&amp;corporateName=${GlobalVariable.corporateName}</restUrl>
    <serviceType>RESTful</serviceType>

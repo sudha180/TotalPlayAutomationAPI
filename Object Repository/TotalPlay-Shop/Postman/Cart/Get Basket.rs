@@ -13,7 +13,7 @@
    <httpBody></httpBody>
    <httpBodyContent>{
   &quot;text&quot;: &quot;{}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;contentType&quot;: &quot;text/plain&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -82,6 +82,7 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-</verificationScript>
+
+WS.verifyElementPropertyValue(response, '', &quot;La_Casa_de_Tono_Coyoacan&quot;)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

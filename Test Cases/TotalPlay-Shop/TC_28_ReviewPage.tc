@@ -4,5 +4,6 @@
    <name>TC_28_ReviewPage</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>90419caa-22e4-4f85-ba83-1a83f01c4fca</testCaseGuid>
 </TestCaseEntity>

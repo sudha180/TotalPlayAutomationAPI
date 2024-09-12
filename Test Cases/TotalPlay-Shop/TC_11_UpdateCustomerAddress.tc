@@ -4,5 +4,6 @@
    <name>TC_11_UpdateCustomerAddress</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>59ea3f62-1628-49bd-824b-ba1b14d1b544</testCaseGuid>
 </TestCaseEntity>

@@ -81,7 +81,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'IUSA'</initValue>
+      <initValue>'Izlah'</initValue>
       <name>corporateName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -106,7 +106,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'3'</initValue>
+      <initValue>'2'</initValue>
       <name>quantity</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -141,7 +141,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'6164'</initValue>
+      <initValue>'2073'</initValue>
       <name>SellerId2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -158,5 +158,10 @@
       <description></description>
       <initValue>'-99.205670'</initValue>
       <name>longitude</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'c_miraklShopID=4158'</initValue>
+      <name>refine_1</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

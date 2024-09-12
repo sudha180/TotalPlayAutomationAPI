@@ -33,6 +33,7 @@ getAddress = WS.sendRequest(findTestObject('TotalPlay-Food/GetAddresses', [('URL
 WS.verifyResponseStatusCode(getAddress, 200)
 
 AddAddressToCart = WS.sendRequest(findTestObject('TotalPlay-Food/add address to cart', [('URL') : GlobalVariable.URL, ('basketID') : GlobalVariable.FoodBasketId]))
+CustomKeywords.'totalplay.Common.printResponseinText'(AddAddressToCart)
 
 WS.verifyResponseStatusCode(AddAddressToCart, 200)
 

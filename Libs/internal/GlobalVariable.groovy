@@ -184,6 +184,16 @@ public class GlobalVariable {
      */
     public static Object longitude
      
+    /**
+     * <p></p>
+     */
+    public static Object refine_1
+     
+    /**
+     * <p></p>
+     */
+    public static Object lattitude
+     
 
     static {
         try {
@@ -226,6 +236,8 @@ public class GlobalVariable {
             brm_id = selectedVariables['brm_id']
             latitude = selectedVariables['latitude']
             longitude = selectedVariables['longitude']
+            refine_1 = selectedVariables['refine_1']
+            lattitude = selectedVariables['lattitude']
             
         } catch (Exception e) {
             TestCaseMain.logGlobalVariableError(e)

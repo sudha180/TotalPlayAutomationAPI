@@ -19,6 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 LoginResponse = WS.sendRequest(findTestObject('TotalPlay-Shop/Interface Login (SLAS)', [('URL') : GlobalVariable.URL, ('SITEID') : GlobalVariable.SITEID]))
+CustomKeywords.'totalplay.Common.printResponseinText'(LoginResponse)
 
 //CustomKeywords.'totalplay.Common.printResponseinText'(LoginResponse)
 assert WS.getResponseStatusCode(LoginResponse) == 200
@@ -62,7 +63,6 @@ customer_email = 'ocapiResponse.customer_email'
 c_brmId = 'ocapiResponse.c_brmId'
 
 customer_name = 'ocapiResponse.customer_name'
-CustomKeywords.'totalplay.Common.printResponseinText'(LoginResponse)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(LoginResponse, refresh_token)
 

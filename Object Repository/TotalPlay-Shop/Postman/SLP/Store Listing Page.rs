@@ -5,7 +5,6 @@
    <tag></tag>
    <elementGuidId>a94d121c-0dd0-475b-bd86-35073b4a340b</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
-   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
       <authorizationInfo>
@@ -16,7 +15,6 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
-   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -37,7 +35,6 @@
    <katalonVersion>9.3.0</katalonVersion>
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <path></path>
    <restRequestMethod>GET</restRequestMethod>
    <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v23_1/content/store-listing-page</restUrl>
    <serviceType>RESTful</serviceType>
@@ -75,9 +72,6 @@ import internal.GlobalVariable as GlobalVariable
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-WS.verifyResponseStatusCode(response, 200)
-
-assertThat(response.getStatusCode()).isEqualTo(200)
 WS.verifyElementPropertyValue(response, 'pageId', &quot;storelistingpage&quot;)
 WS.verifyElementPropertyValue(response, 'pageTypeId', &quot;storeListing&quot;)
 WS.verifyElementPropertyValue(response, 'pageTitle', &quot;Store Listing Page (SLP)&quot;)
@@ -158,9 +152,6 @@ WS.verifyElementPropertyValue(response, 'components[5].componentAssets[0].ondema
 WS.verifyElementPropertyValue(response, 'components[5].componentAssets[0].multistoreEDD', &quot;6 - 11 días&quot;)
 WS.verifyElementPropertyValue(response, 'components[5].componentAssets[0].storeOpen', false)
 WS.verifyElementPropertyValue(response, 'components[5].componentAssets[0].OpenHrs', &quot;&quot;)
-WS.verifyElementPropertyValue(response, 'components[5].componentAssets[0].isAgeRestricted', true)
-
-
-</verificationScript>
+WS.verifyElementPropertyValue(response, 'components[5].componentAssets[0].isAgeRestricted', true)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

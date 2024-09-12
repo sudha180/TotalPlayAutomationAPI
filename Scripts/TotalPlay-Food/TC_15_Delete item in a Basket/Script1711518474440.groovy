@@ -19,26 +19,31 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('TotalPlay-Food/TC_1_Login_Service'), [:], FailureHandling.STOP_ON_FAILURE)
 
-AddProductToBAsket = WS.sendRequest(findTestObject('TotalPlay-Food/AddProductToBasket', [('URL') : GlobalVariable.URL, ('basketID') : GlobalVariable.basketID]))
+AddProductToBAsket = WS.sendRequest(findTestObject('TotalPlay-Food/Food_Add to cart', [('URL') : GlobalVariable.URL, ('basketID') : GlobalVariable.basketID, ('SellerId1') : GlobalVariable.SellerId1]))
+
+CustomKeywords.'totalplay.Common.printResponseinText'(AddProductToBAsket)
 
 WS.verifyResponseStatusCode(AddProductToBAsket, 200)
 
-product_productItemId = 'product.productItemId'
+product_productItemId = 'product_items[0].item_id'
 
 GlobalVariable.Item_id = WS.getElementPropertyValue(AddProductToBAsket, product_productItemId)
+
+println(GlobalVariable.Item_id)
+
+DeleteItem = DeleteItemInBasket = WS.sendRequest(findTestObject('TotalPlay-Food/deleteItemInBasket'))
+
+WS.verifyResponseStatusCode(DeleteItem, 200)
+
 //
-//println(GlobalVariable.Item_id)
-
-DeleteItemInBasket = WS.sendRequest(findTestObject('TotalPlay-Food/deleteItemInBasket'))
-
-product_items_item_id = 'product_items[0].item_id'
-
-String ItemId = WS.getElementPropertyValue(DeleteItemInBasket, product_items_item_id)
-
-if(GlobalVariable.Item_id == ItemId)
-{
-	println('ItemDeleted')
-}
-else {
-	println('Something Went Wrong')
-}
+//product_items_item_id = 'product_items[0].item_id'
+//
+//String ItemId = WS.getElementPropertyValue(DeleteItemInBasket, product_items_item_id)
+//
+//if(GlobalVariable.Item_id == ItemId)
+//{
+//	println('ItemDeleted')
+//}
+//else {
+//	println('Something Went Wrong')
+//}

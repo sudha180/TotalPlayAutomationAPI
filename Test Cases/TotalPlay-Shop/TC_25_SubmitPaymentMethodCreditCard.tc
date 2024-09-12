@@ -4,5 +4,6 @@
    <name>TC_25_SubmitPaymentMethodCreditCard</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>6cb6b289-a061-40d7-af8c-ecf48e655ebc</testCaseGuid>
 </TestCaseEntity>

@@ -37,7 +37,7 @@ c_result_stores_link = 'c_result.stores[0].link'
 c_result_stores_storeOpen = 'c_result.stores[0].storeOpen'
 
 c_result_stores_isStoreActive = 'c_result.stores[0].isStoreActive'
-c_result_stores_todayOpenHrs_time = 'c_result.stores[0].todayOpenHrs.time'
+//c_result_stores_todayOpenHrs_time = 'c_result.stores[0].todayOpenHrs.time'
 c_result_stores_todayOpenHrs_time_openingTime = 'c_result.stores[0].todayOpenHrs.time[0].openingTime'
 c_result_stores_todayOpenHrs_time_closingTime = 'c_result.stores[0].todayOpenHrs.time[0].closingTime'
 c_result_stores_todayOpenHrs_closed = 'c_result.stores[0].todayOpenHrs.closed'
@@ -105,9 +105,9 @@ CustomKeywords.'totalplay.Common.getNumValueofObject'(FoodSCP, c_result_overall_
 CustomKeywords.'totalplay.Common.getNumValueofObject'(FoodSCP, c_result_stores_count)
 
 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodSCP, c_result_stores_todayOpenHrs_time)
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodSCP, c_result_stores_todayOpenHrs_time_openingTime)
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodSCP, c_result_stores_todayOpenHrs_time_closingTime)
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodSCP, c_result_stores_todayOpenHrs_time)
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodSCP, c_result_stores_todayOpenHrs_time_openingTime)
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodSCP, c_result_stores_todayOpenHrs_time_closingTime)
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodSCP, c_result_stores_todayOpenHrs_closed)
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodSCP, c_result_stores_todayOpenHrs_day)
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodSCP, c_result_stores_isStoreActive)

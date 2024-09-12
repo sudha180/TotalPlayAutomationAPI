@@ -4,5 +4,6 @@
    <name>TC_27_PreAuthPayments</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>eb7556b5-79c7-4add-851d-24e19ac8e546</testCaseGuid>
 </TestCaseEntity>

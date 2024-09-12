@@ -21,7 +21,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;postal_code\&quot;: \&quot;52000\&quot;,\n    \&quot;c_latitude\&quot;: \&quot;19.634770\&quot;,\n    \&quot;c_longitude\&quot;: \&quot;-99.079800\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;postal_code\&quot;: \&quot;${GlobalVariable.postal_code}\&quot;,\n    \&quot;c_latitude\&quot;: \&quot;${GlobalVariable.lattitude}\&quot;,\n    \&quot;c_longitude\&quot;: \&quot;${GlobalVariable.longitude}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
-      <webElementGuid>77128ad8-0f11-4601-807a-c96fc2d97538</webElementGuid>
+      <webElementGuid>e11407b3-4c05-4b8c-81e0-23905bb647d9</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>

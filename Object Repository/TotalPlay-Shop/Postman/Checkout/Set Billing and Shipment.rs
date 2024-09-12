@@ -32,7 +32,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
-      <webElementGuid>080c383b-3ebd-401b-840d-24e30c339ab3</webElementGuid>
+      <webElementGuid>870c56c5-8a96-4de3-abb4-b82158c5e9b4</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>

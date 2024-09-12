@@ -4,5 +4,6 @@
    <name>TC_14_Update_quantity_item_in_a_Cart</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>90cb4052-7786-4009-ab3c-71033f7902c5</testCaseGuid>
 </TestCaseEntity>

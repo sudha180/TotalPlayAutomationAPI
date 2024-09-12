@@ -5,6 +5,7 @@
    <tag></tag>
    <elementGuidId>c0295c7d-1394-4533-8eab-60914e85a805</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
       <authorizationInfo>
@@ -15,12 +16,13 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
   &quot;text&quot;: &quot;{\n    \&quot;amount\&quot;: 1799.00,\n    \&quot;payment_card\&quot;: {\n        \&quot;holder\&quot;: \&quot;Test Dev\&quot;,\n        \&quot;card_type\&quot;: \&quot;Visa\&quot;,\n        \&quot;expiration_month\&quot;: 6,\n        \&quot;expiration_year\&quot;: 2024\n    },\n    \&quot;payment_method_id\&quot;: \&quot;CREDIT_CARD\&quot;,\n    \&quot;c_IDCard\&quot;: \&quot;6214547\&quot;\n}&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -43,8 +45,9 @@
    <katalonVersion>9.3.0</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v23_1/baskets/${GlobalVariable.basketID}/payment_instruments</restUrl>
+   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v24_5/baskets/${GlobalVariable.basketID}/payment_instruments</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

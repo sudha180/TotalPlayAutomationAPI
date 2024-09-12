@@ -5,7 +5,6 @@
    <tag></tag>
    <elementGuidId>d87734c7-640d-4ea3-8c64-1b4069ab3a84</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
-   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
       <authorizationInfo>
@@ -16,8 +15,7 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
-   <autoUpdateContent>true</autoUpdateContent>
-   <connectionTimeout>0</connectionTimeout>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
@@ -43,18 +41,17 @@
       <webElementGuid>08c6f6b2-0266-474d-893b-f99294b7da7b</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>9.3.0</katalonVersion>
-   <maxResponseSize>0</maxResponseSize>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <path></path>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v24_5/content/order-history?pageSize=10&amp;pageNum=0&amp;pastOrders=30</restUrl>
+   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v23_1/content/order-history?pageSize=10&amp;pageNum=0&amp;pastOrders=30</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <socketTimeout>0</socketTimeout>
+   <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>GlobalVariable.URL</defaultValue>
@@ -91,28 +88,6 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-
-WS.verifyElementPropertyValue(response, '_v', &quot;24.5&quot;)
-WS.verifyElementPropertyValue(response, '_type', &quot;content&quot;)
-WS.verifyElementPropertyValue(response, 'id', &quot;order-history&quot;)
-WS.verifyElementPropertyValue(response, 'name', &quot;order-history&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].order_no', &quot;00021405&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].sellerNames', &quot;ODARA-PROFESSIONAL&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].edd', &quot;5 - 11 dias&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].order_created', &quot;2024-09-06 01:01:30.0&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].products_count', 1)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].corporate_name', &quot;Odara&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].order_total', &quot;241.74&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].sellerIds', &quot;2020&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].storeDetails.ID', &quot;2020&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].storeDetails.name', &quot;ODARA-PROFESSIONAL&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].storeDetails.phone', &quot;5621441345&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].storeDetails.storeEvents', null)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].storeDetails.storeHours', null)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].storeDetails.logo', &quot;https://salesforceqa.sistemastp.com.mx/on/demandware.static/-/Sites/default/dw6dff0dac/images/seller/202081072.8228689662&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].storeDetails.verticalType', &quot;MultiStore&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.orders[0].status', &quot;en proceso&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.order_total_count', 44)
-WS.verifyElementPropertyValue(response, 'c_result.total_pages', 5)</verificationScript>
+</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

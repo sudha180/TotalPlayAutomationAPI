@@ -16,15 +16,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.util.KeywordUtil
-
-
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+ 
 WebUI.callTestCase(findTestCase('TotalPlay-Shop/TC_1_InterfaceLogin'), [:], FailureHandling.STOP_ON_FAILURE)
-
+ 
 PDP_Response = WS.sendRequest(findTestObject('TotalPlay-Shop/Postman/PDP/PDP', [('URL') : GlobalVariable.URL, ('SITEID') : GlobalVariable.SITEID]))
-
+ 
 WS.verifyResponseStatusCode(PDP_Response, 200)
-
+ 
+ 
 pageId = 'pageId'
 pageTypeId = 'pageTypeId'
 pageTitle = 'pageTitle'
@@ -57,37 +57,37 @@ longDescription = 'components[0].result.longDescription'
 shortDescription = 'components[0].result.shortDescription'
 rating = 'components[0].result.rating'
 promotions = 'components[0].result.promotions'
-
+ 
 storefrontAttributes_ID = 'components[0].result.attributes[0].ID'
 storefrontAttributes_name = 'components[0].result.attributes[0].name'
-
+ 
 anchodel_label = 'components[0].result.attributes[0].attributes[0].label'
 anchodel_value = 'components[0].result.attributes[0].attributes[0].value'
-
+ 
 alturadel_label = 'components[0].result.attributes[0].attributes[1].label'
 alturadel_value = 'components[0].result.attributes[0].attributes[1].value'
-
+ 
 pesodel_label = 'components[0].result.attributes[0].attributes[2].label'
 pesodel_value = 'components[0].result.attributes[0].attributes[2].value'
-
+ 
 OperatorAttributes_ID = 'components[0].result.attributes[1].ID'
 OperatorAttributes_name = 'components[0].result.attributes[1].name'
-
+ 
 Descripciónlarga_label = 'components[0].result.attributes[1].attributes[0].label'
 Descripciónlarga_value = 'components[0].result.attributes[1].attributes[0].value'
-
+ 
 isPopular_label =  'components[0].result.attributes[1].attributes[1].label'
 isPopular_value =  'components[0].result.attributes[1].attributes[1].value'
-
+ 
 TipodeProducto_label =  'components[0].result.attributes[1].attributes[2].label'
 TipodeProducto_value =  'components[0].result.attributes[1].attributes[2].value'
-
+ 
 especificaciones_label = 'components[0].result.attributes[2].attributes[0].label'
 especificaciones_value = 'components[0].result.attributes[2].attributes[0].value'
-
+ 
 Marca_label = 'components[0].result.attributes[2].attributes[6].label'
 Marca_value =  'components[0].result.attributes[2].attributes[6].value'
-
+ 
 selectedProductUrl = 'components[0].result.selectedProductUrl'
 readyToOrder = 'components[0].result.readyToOrder'
 online = 'components[0].result.online'
@@ -101,13 +101,13 @@ shopID = 'components[0].result.shopID'
 emi_months = 'components[0].result.emi_months'
 emi_installment_amount = 'components[0].result.emi_installment_amount'
 isVariant = 'components[0].result.isVariant'
-
-
+ 
+ 
  
 FAQcomponentTypeId = 'components[2].componentTypeId'
 FAQcomponentType = 'components[2].componentType'
 FAQregionId = 'components[2].regionId'
-
+ 
 SimilarProducts_componentTypeId = 'components[3].componentTypeId'
 SimilarProducts_componentType = 'components[3].componentType'
 Similarproducts_regionId = 'components[3].regionId'
@@ -135,9 +135,9 @@ SimilarProducts_isVariant = 'components[6].carouselData[0].isVariant'
 SimilarProducts_colorSwatches = 'components[6].carouselData[0].colorSwatches'
 SimilarProducts_emi_installment_amount =  'components[6].carouselData[0].emi_installment_amount'
 SimilarProducts_bestOfferPrice = 'components[6].carouselData[0].bestOfferPrice'
-
-
-
+ 
+ 
+ 
 CategoryCard_componentTypeId = 'components[6].componentAssets[0].componentTypeId'
 CategoryCard_promotionName = 'components[6].componentAssets[0].promotionName'
 CategoryCard_category_name = 'components[6].componentAssets[0].category.name'
@@ -151,24 +151,24 @@ CategoryCard_subCategory_url = 'components[6].componentAssets[0].category.subCat
 CategoryCard_subCategory_image = 'components[6].componentAssets[0].category.subCategory[0].image'
 CategoryCard_subCategory_isLeaf = 'components[6].componentAssets[0].category.subCategory[0].isLeaf'
 CategoryCard_promotionMessage = 'components[6].componentAssets[0].promotionMessage'
-
-
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, pageId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, pageId)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, pageTypeId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, pageTypeId)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, pageTitle)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, pageTitle)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, bestOfferPrice)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, bestOfferPrice)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, available)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, available)
-
-
+ 
+ 
 /*String message = WS.getElementPropertyValue(PDP_Response, availability_messages)
 KeywordUtil.logInfo(message)
 if(message!=null) {
@@ -177,142 +177,142 @@ if(message!=null) {
 else {
 	KeywordUtil.markFailed("value is not present")
 }*/
-
+ 
 CustomKeywords.'totalplay.Common.verifyValueInObject' (PDP_Response, availability_messages)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, availableQuantity)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, availableQuantity)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, uuid)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, uuid)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, id)
-
-
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyValueInObject' (PDP_Response, shopIdName)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, shopIdName)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, productName)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, productName)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, productType)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, productType)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, brand)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, brand)
-
+ 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, brand)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, brand)
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, sales_value)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, sales_value)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, sales_currency)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, sales_currency)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, sales_formatted)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, sales_formatted)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, sales_decimalPrice)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, sales_decimalPrice)
-
+ 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(PDP_Response, list_value)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, list_value)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, list_currency)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, list_currency)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, list_formatted)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, list_formatted)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, list_decimalPrice)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, list_decimalPrice)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, images_alt)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, images_alt)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, images_url)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, images_url)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, images_title)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, images_title)
-
+ 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(PDP_Response, selectedQuantity)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, selectedQuantity)
-
+ 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(PDP_Response, minOrderQuantity)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, minOrderQuantity)
-
+ 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(PDP_Response, maxOrderQuantity)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, maxOrderQuantity)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyEmpty'(PDP_Response, variationAttributes)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, variationAttributes)
-
-
+ 
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, longDescription)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, longDescription)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, shortDescription)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, shortDescription)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(PDP_Response, rating)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, rating)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, promotions)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, promotions)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, storefrontAttributes_ID)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, storefrontAttributes_ID)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, storefrontAttributes_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, storefrontAttributes_name)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, anchodel_label)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, anchodel_label)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, anchodel_value)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, anchodel_value)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, alturadel_label)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, alturadel_label)
-
+ 
 CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, alturadel_value)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, alturadel_value)
 //
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, pesodel_label)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, pesodel_label)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, pesodel_value)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, pesodel_value)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, OperatorAttributes_ID)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, OperatorAttributes_ID)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, OperatorAttributes_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, OperatorAttributes_name)
-
-
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, Descripciónlarga_label)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, Descripciónlarga_label)
-
+ 
 CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, Descripciónlarga_value)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, Descripciónlarga_value)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, isPopular_label)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, isPopular_label)
-
-CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, isPopular_value)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, isPopular_label)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, isPopular_label)
+// 
+//CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, isPopular_value)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, isPopular_value)
 //
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, TipodeProducto_label)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, TipodeProducto_label)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, TipodeProducto_value)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, TipodeProducto_value)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, especificaciones_label)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, especificaciones_label)
-
-WS.getElementPropertyValue(PDP_Response, SimilarProducts_image_url)
+ 
+//WS.getElementPropertyValue(PDP_Response, SimilarProducts_image_url)
 CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, especificaciones_value)
 ////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, especificaciones_value)
 //
@@ -321,19 +321,19 @@ CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, especificaci
 //
 //CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, Marca_value)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, Marca_value)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, selectedProductUrl)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, selectedProductUrl)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, readyToOrder)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, readyToOrder)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, online)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, online)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, isMarketplaceProduct)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, isMarketplaceProduct)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, state)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, state)
 //
@@ -342,136 +342,136 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, state)
 //
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, promoName)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, promoName)
-
+ 
 CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, shopName)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, shopName)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, customProductType)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, customProductType)
-
+ 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, customProductType)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, customProductType)
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, shopID)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, shopID)
-
+ 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(PDP_Response, emi_months)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, emi_months)
 //
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, emi_installment_amount)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, emi_installment_amount)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, isVariant)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, isVariant)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, FAQcomponentTypeId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, FAQcomponentTypeId)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, FAQcomponentType)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, FAQcomponentType)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, FAQregionId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, FAQregionId)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_componentTypeId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_componentTypeId)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_componentType)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_componentType)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, Similarproducts_regionId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, Similarproducts_regionId)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_carouselHeading)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_carouselHeading)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_heading)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_heading)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_online)
+ 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_carouselHeading)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_carouselHeading)
+ 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_heading)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_heading)
+// 
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_online)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_online)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_link)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_link)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_productId)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_productId)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_productName)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_productName)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_productType)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_productType)
-
-CustomKeywords.'totalplay.Common.getNumValueofObject'(PDP_Response, SimilarProducts_basePrice_value)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_basePrice_value)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_basePrice_currency)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_basePrice_currency)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_basePrice_formatted)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_basePrice_formatted)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_basePrice_decimalPrice)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_basePrice_decimalPrice)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_salePrice_value)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_salePrice_value)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_salePrice_formatted)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_salePrice_formatted)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_salePrice_decimalPrice)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_salePrice_decimalPrice)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_image_alt)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_image_alt)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_image_url)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_image_url)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_image_title)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_image_title)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_discount_percentage)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_discount_percentage)
-
-CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, SimilarProducts_promotionName)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_promotionName)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_promoPrice)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_promoPrice)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_isVariant)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_isVariant)
-
-CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, SimilarProducts_colorSwatches)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_colorSwatches)
-//
-//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_emi_installment_amount)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_emi_installment_amount)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_bestOfferPrice)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_bestOfferPrice)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, CategoryCard_componentTypeId)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_componentTypeId)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, CategoryCard_promotionName)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_promotionName)
-
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_link)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_link)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_productId)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_productId)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_productName)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_productName)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_productType)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_productType)
+// 
+//CustomKeywords.'totalplay.Common.getNumValueofObject'(PDP_Response, SimilarProducts_basePrice_value)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_basePrice_value)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_basePrice_currency)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_basePrice_currency)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_basePrice_formatted)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_basePrice_formatted)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_basePrice_decimalPrice)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_basePrice_decimalPrice)
+// 
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_salePrice_value)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_salePrice_value)
+// 
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_salePrice_formatted)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_salePrice_formatted)
+// 
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_salePrice_decimalPrice)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_salePrice_decimalPrice)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_image_alt)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_image_alt)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_image_url)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_image_url)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_image_title)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_image_title)
+// 
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_discount_percentage)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_discount_percentage)
+// 
+//CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, SimilarProducts_promotionName)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_promotionName)
+// 
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_promoPrice)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_promoPrice)
+// 
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_isVariant)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_isVariant)
+// 
+//CustomKeywords.'totalplay.Common.verifyValueInObject'(PDP_Response, SimilarProducts_colorSwatches)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_colorSwatches)
+////
+////CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, SimilarProducts_emi_installment_amount)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_emi_installment_amount)
+// 
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PDP_Response, SimilarProducts_bestOfferPrice)
+////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, SimilarProducts_bestOfferPrice)
+//// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, CategoryCard_componentTypeId)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_componentTypeId)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, CategoryCard_promotionName)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_promotionName)
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, CategoryCard_category_name)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_category_name)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, CategoryCard_category_id)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_category_id)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, CategoryCard_category_image)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_category_image)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, CategoryCard_category_linkType)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_category_linkType)
-
+ 
 //CustomKeywords.'totalplay.Common.getBooleanValueofObject' (PDP_Response, CategoryCard_category_isLeaf)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_category_isLeaf)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, CategoryCard_subCategory_name)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_subCategory_name)
 //
@@ -489,6 +489,5 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, Categor
 //
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(PDP_Response, CategoryCard_promotionMessage)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PDP_Response, CategoryCard_promotionMessage)
-
-
-
+ 
+ 

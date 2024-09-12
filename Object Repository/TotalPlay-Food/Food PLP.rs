@@ -35,7 +35,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.URL}/on/demandware.store/Sites-TP-FOOD-Site/es/OnDemand-Show?lat=20.789968&amp;long=-100.474817&amp;storeName=Krusty</restUrl>
+   <restUrl>${GlobalVariable.URL}/on/demandware.store/Sites-TP-FOOD-Site/es/OnDemand-Show?lat=${GlobalVariable.latitude}&amp;long=${GlobalVariable.longitude}&amp;storeName=${GlobalVariable.corporateName}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -191,6 +191,8 @@ WS.verifyElementPropertyValue(response, 'components[3].products[2]', '')
 WS.verifyElementPropertyValue(response, 'components[3].products[2].online', '')
 WS.verifyElementPropertyValue(response, 'components[3].products[2].link', '')
 
-</verificationScript>
+
+
+WS.verifyElementPropertyValue(response, 'components[1].storeData.ID', '')</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

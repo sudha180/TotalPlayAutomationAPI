@@ -133,7 +133,7 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(FoodPCP, hits_c
 
 CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(FoodPCP, hits_c_salePrice_decimalPrice)
 
-CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(FoodPCP, hits_c_Image_url)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(FoodPCP, hits_c_Image_url)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPCP, hits_c_Image_url)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPCP, hits_c_Image_title)

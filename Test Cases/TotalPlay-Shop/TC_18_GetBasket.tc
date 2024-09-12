@@ -4,5 +4,6 @@
    <name>TC_18_GetBasket</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>a916a90f-2b69-4942-b934-0efde1e9b2f6</testCaseGuid>
 </TestCaseEntity>

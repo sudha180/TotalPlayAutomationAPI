@@ -42,12 +42,10 @@ components_storeData_open = 'components[0].storeData.open'
 components_storeData_linkType = 'components[0].storeData.linkType'
 components_storeData_corporateColorCode = 'components[0].storeData.corporateColorCode'
 components_storeData_ageShowWarningModel = 'components[0].storeData.ageShowWarningModel'
-
 components_componentTypeId = 'components[1].componentTypeId'
 components_componentTypeId = 'components[2].componentTypeId'
 components_bannerLayout = 'components[2].bannerLayout'
 components_textHeadline = 'components[2].textHeadline'
-
 components_componentAssets_componentTypeId = 'components[2].componentAssets[0].componentTypeId'
 components_componentAssets_image = 'components[2].componentAssets[0].image'
 components_componentAssets_componentType = 'components[2].componentAssets[0].componentType'

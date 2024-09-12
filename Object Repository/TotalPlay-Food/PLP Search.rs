@@ -26,7 +26,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.URL}/s/TP-FOOD/dw/shop/v24_5/search_suggestion?q=burger&amp;page=plp&amp;shopId=2073&amp;count=10</restUrl>
+   <restUrl>${GlobalVariable.URL}/s/TP-FOOD/dw/shop/v24_5/search_suggestion?q=coca&amp;page=plp&amp;shopId=${GlobalVariable.SellerId1}&amp;count=10</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

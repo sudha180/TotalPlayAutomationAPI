@@ -24,23 +24,9 @@ CustomKeywords.'totalplay.Common.printResponseinText'(FoodPLP)
 
 WS.verifyResponseStatusCode(FoodPLP, 200)
 
-action = 'action'
+components_componentTypeId = 'components[1].componentTypeId'
 
-queryString = 'queryString'
-
-locale = 'locale'
-
-pageTitle = 'pageTitle'
-
-pageId = 'pageId'
-
-pageTypeId = 'pageTypeId'
-
-components = 'components'
-
-components_componentTypeId = 'components[0].componentTypeId'
-
-components_componentType = 'components[0].componentType'
+components_componentType = 'components[1].componentType'
 
 components_storeData = 'components[1].storeData'
 
@@ -84,6 +70,7 @@ components_storeData_evaluationsCount = 'components[1].storeData.evaluationsCoun
 
 components_storeData_openHours = 'components[1].storeData.openHours'
 
+
 components_storeData_openHours_time = 'components[1].storeData.openHours[0].time'
 
 components_storeData_openHours_time_openingTime = 'components[1].storeData.openHours[0].time[0].openingTime'
@@ -111,38 +98,38 @@ components_storeData_tarifaDeEntrega = 'components[1].storeData.tarifaDeEntrega'
 components_storeData_politicaDePrecios = 'components[1].storeData.politicaDePrecios'
 
 components_storeData_ageShowWarningModel = 'components[1].storeData.ageShowWarningModel'
-
-components_componentAssets = 'components[2].componentAssets[0]'
-
-components_componentAssets_componentTypeId = 'components[2].componentAssets[0].componentTypeId'
-
-components_componentAssets_link = 'components[2].componentAssets[0].link'
-
-components_componentAssets_isAgeRestricted = 'components[2].componentAssets[0].isAgeRestricted'
-
-components_componentAssets_bannerDesc = 'components[2].componentAssets[0].bannerDesc'
-
-components_componentAssets_bannerName = 'components[2].componentAssets[0].bannerName'
-
-components_componentAssets_linkType = 'components[2].componentAssets[0].linkType'
-
-components_componentAssets_logo = 'components[2].componentAssets[0].logo'
-
-components_componentAssets_corporateColorCode = 'components[2].componentAssets[0].corporateColorCode'
-
-components_componentAssets_deliveryTime = 'components[2].componentAssets[0].deliveryTime'
-
-components_componentAssets_positionAfter = 'components[2].componentAssets[0].positionAfter'
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentType)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentType)
+//
+//components_componentAssets = 'components[2].componentAssets[0]'
+//
+//components_componentAssets_componentTypeId = 'components[2].componentAssets[0].componentTypeId'
+//
+//components_componentAssets_link = 'components[2].componentAssets[0].link'
+//
+//components_componentAssets_isAgeRestricted = 'components[2].componentAssets[0].isAgeRestricted'
+//
+//components_componentAssets_bannerDesc = 'components[2].componentAssets[0].bannerDesc'
+//
+//components_componentAssets_bannerName = 'components[2].componentAssets[0].bannerName'
+//
+//components_componentAssets_linkType = 'components[2].componentAssets[0].linkType'
+//
+//components_componentAssets_logo = 'components[2].componentAssets[0].logo'
+//
+//components_componentAssets_corporateColorCode = 'components[2].componentAssets[0].corporateColorCode'
+//
+//components_componentAssets_deliveryTime = 'components[0].componentAssets[0].deliveryTime'
+//
+//components_componentAssets_positionAfter = 'components[0].componentAssets[0].positionAfter'
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentType)
 
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentType)
 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_storeData)
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentType)
+
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentType)
+
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_storeData)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_storeData_ID)
 
@@ -188,7 +175,7 @@ CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_storeD
 
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_storeData_link)
 
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_deliveryTime)
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_deliveryTime)
 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_storeData_MultistoreEDD)
 
@@ -243,37 +230,37 @@ CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_st
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_storeData_politicaDePrecios)
 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_storeData_ageShowWarningModel)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets_componentTypeId)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentAssets_componentTypeId)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets_link)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentAssets_link)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_isAgeRestricted)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets_bannerDesc)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentAssets_bannerDesc)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets_bannerName)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentAssets_bannerName)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets_linkType)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentAssets_linkType)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_logo)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_corporateColorCode)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_deliveryTime)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_positionAfter)
-
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets_componentTypeId)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentAssets_componentTypeId)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets_link)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentAssets_link)
+//
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_isAgeRestricted)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets_bannerDesc)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentAssets_bannerDesc)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets_bannerName)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentAssets_bannerName)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(FoodPLP, components_componentAssets_linkType)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(FoodPLP, components_componentAssets_linkType)
+//
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_logo)
+//
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_corporateColorCode)
+//
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_deliveryTime)
+//
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(FoodPLP, components_componentAssets_positionAfter)
+//
 

@@ -4,5 +4,6 @@
    <name>TC_17_Cart Recommendations</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>788b6f53-75a7-49a3-a3dd-cf5d31fa1e51</testCaseGuid>
 </TestCaseEntity>

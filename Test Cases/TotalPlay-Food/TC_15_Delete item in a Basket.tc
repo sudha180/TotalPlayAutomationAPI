@@ -4,5 +4,6 @@
    <name>TC_15_Delete item in a Basket</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>abbaf1f9-8713-4488-b960-8b13802f5105</testCaseGuid>
 </TestCaseEntity>

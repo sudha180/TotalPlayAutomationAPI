@@ -19,12 +19,23 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('TotalPlay-Shop/TC_1_InterfaceLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
+OrderHistory = WS.sendRequest(findTestObject('TotalPlay-Shop/Postman/OrderHistory/OrderHistory', [('URL') : GlobalVariable.URL, ('SITEID') : GlobalVariable.SITEID
+            , ('Authorization') : GlobalVariable.Authorization]))
+
+WS.verifyResponseStatusCode(OrderHistory, 200)
+
+order_no = 'c_result.orders[0].order_no'
+
+GlobalVariable.OrderNo = WS.getElementPropertyValue(OrderHistory, order_no)
+
+println(GlobalVariable.OrderNo)
+
 getOrderByID = WS.sendRequest(findTestObject('TotalPlay-Shop/Postman/OrderHistory/getOrderById', [('URL') : GlobalVariable.URL
             , ('SITEID') : GlobalVariable.SITEID]))
+
 CustomKeywords.'totalplay.Common.printResponseinText'(getOrderByID)
 
 WS.verifyResponseStatusCode(getOrderByID, 200)
-
 
 _v = '_v'
 
@@ -268,25 +279,22 @@ CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, _v)
 
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, _v)
 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, _type)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, _type)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, id)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, id)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, name)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, name)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_order_no)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_order_no)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_sfccCustomerNumber)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_sfccCustomerNumber)
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, _type)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, _type)
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, id)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, id)
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, name)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, name)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_order_no)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_order_no)
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_sfccCustomerNumber)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_sfccCustomerNumber)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_brmId)
 
@@ -297,144 +305,189 @@ CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_cor
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_corporate_name)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_corporate_name)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_corporate_name)
 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(getOrderByID, c_result_totalCost)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_product_total)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_product_total)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipment_id)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipment_id)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipment_total)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipment_total)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address__type)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address__type)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_address1)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_address1)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_city)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_city)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_country_code)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_country_code)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_first_name)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_first_name)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_full_name)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_full_name)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_id)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_id)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_last_name)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_last_name)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_phone)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_phone)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_postal_code)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_postal_code)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_second_name)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_second_name)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_alias)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_alias)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_delegation)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_delegation)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_isBilling)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_isBilling)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_isContact)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_isContact)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_isShipping)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_isShipping)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_latitude)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_latitude)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_longitude)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_longitude)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_nExt)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_nExt)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_nInt)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_nInt)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_neighborhood)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_neighborhood)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_references)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_references)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_rfc)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_rfc)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_state)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_state)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_streetName)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_streetName)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_address_c_streetNumber)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_address_c_streetNumber)
 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(getOrderByID, c_result_shipments_0_shipping_address_c_etiqueta_home)
+
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(getOrderByID, c_result_shipments_0_shipping_address_c_etiqueta_company)
+
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(getOrderByID, c_result_shipments_0_shipping_address_c_etiqueta_other)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_method__type)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_method__type)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_method_id)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_method_id)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_shipping_method_name)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_shipping_method_name)
 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(getOrderByID, c_result_shipments_0_shipping_total)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_service_cost)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_service_cost)
 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(getOrderByID, c_result_shipments_0_c_canCancel)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shopId)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shopId)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shopName)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shopName)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shopContact)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shopContact)
 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(getOrderByID, c_result_shipments_0_c_productItems_0_total_price_without_discount)
+
 CustomKeywords.'totalplay.Common.getNumValueofObject'(getOrderByID, c_result_shipments_0_c_productItems_0_total_price_with_discount)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_productItems_0_product_id)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_productItems_0_product_id)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_productItems_0_product_name)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_productItems_0_product_name)
 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(getOrderByID, c_result_shipments_0_c_productItems_0_quantity)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_productItems_0_product_image_0_alt)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_productItems_0_product_image_0_alt)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_productItems_0_product_image_0_url)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_productItems_0_product_image_0_url)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_productItems_0_product_image_0_title)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_productItems_0_product_image_0_title)
 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(getOrderByID, c_result_shipments_0_c_productItems_0_is_cancelled)
@@ -444,119 +497,159 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(getOrderByID, c
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(getOrderByID, c_result_shipments_0_c_productItems_0_c_isOnDemandStoreItem)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_paymentInstruments_0_masked_number)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_paymentInstruments_0_masked_number)
 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(getOrderByID, c_result_shipments_0_c_paymentInstruments_0_amount)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_paymentInstruments_0_payment_method_id)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_paymentInstruments_0_payment_method_id)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_paymentInstruments_0_card_holder)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_paymentInstruments_0_card_holder)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_currrentStatus)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_currrentStatus)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_estimatedDelivery)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_estimatedDelivery)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage1)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage1)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage2)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage2)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage3)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage3)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage4)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage4)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage5)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage5)
 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage6)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage6)
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage6)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_information_stage6)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_packageDetails_packageName)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_packageDetails_packageName)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_packageDetails_driverName)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(getOrderByID, c_result_shipments_0_c_shipmentStatus_packageDetails_driverNumber)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_bookingId)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_bookingId)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_originChannel)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_originChannel)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_requestedBy)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_requestedBy)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_packageDetails_sellerNumber)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_shipmentStatus_packageDetails_sellerNumber)
 
 CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(getOrderByID, c_result_shipments_0_trackingLedger_0_prevStatus)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(getOrderByID, c_result_shipments_0_trackingLedger_0_prevStatusTech)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_newStatus)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_newStatus)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_newStatusTech)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_newStatusTech)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_updateDate)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_trackingLedger_0_updateDate)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_orderPlacedChannel)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_orderPlacedChannel)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_estimatedDeliveryTime)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_estimatedDeliveryTime)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_productCost)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_productCost)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_order_total)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_order_total)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_shipments_0_c_savingsTotal)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_shipments_0_c_savingsTotal)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_productCost)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_productCost)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_customerEmail)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_customerEmail)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_c_formatedShippingTotalGrossPrice)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_c_formatedShippingTotalGrossPrice)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_multistoreStoreDetails_ID)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_multistoreStoreDetails_ID)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_multistoreStoreDetails_address1)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_multistoreStoreDetails_address1)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_multistoreStoreDetails_logo)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_multistoreStoreDetails_logo)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_status)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_status)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_order_total)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_order_total)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_c_formatedserviceChargeTotalGrossPrice)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_c_formatedserviceChargeTotalGrossPrice)
 
 CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(getOrderByID, c_result_c_shipmentNote)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_c_serviceCharge)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_c_serviceCharge)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_c_formatedServiceCharge)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_c_formatedServiceCharge)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(getOrderByID, c_result_c_savingsTotal)
+
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_result_c_savingsTotal)
+
+

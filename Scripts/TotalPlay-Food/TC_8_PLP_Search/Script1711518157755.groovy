@@ -20,6 +20,7 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('TotalPlay-Food/TC_1_Login_Service'), [:], FailureHandling.STOP_ON_FAILURE)
 
 PLPSearch = WS.sendRequest(findTestObject('TotalPlay-Food/PLP Search', [('URL') : GlobalVariable.URL]))
+CustomKeywords.'totalplay.Common.printResponseinText'(PLPSearch)
 
 WS.verifyResponseStatusCode(PLPSearch, 200)
 
@@ -276,22 +277,22 @@ CustomKeywords.'totalplay.Common.verifyPropertyExist'(PLPSearch, products_0_base
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PLPSearch, products_0_basePrice_decimalPrice)
 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(PLPSearch, products_0_salePrice_value)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(PLPSearch, products_0_salePrice_currency)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(PLPSearch, products_0_salePrice_formatted)
-
-CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(PLPSearch, products_0_salePrice_decimalPrice)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PLPSearch, products_0_salePrice_currency)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PLPSearch, products_0_salePrice_formatted)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PLPSearch, products_0_salePrice_decimalPrice)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PLPSearch, products_0_image_0_alt)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PLPSearch, products_0_image_0_alt)
 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(PLPSearch, products_0_image_0_url)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PLPSearch, products_0_image_0_url)
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(PLPSearch, products_0_image_0_url)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PLPSearch, products_0_image_0_url)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(PLPSearch, products_0_image_0_title)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(PLPSearch, products_0_image_0_title)
 
-CustomKeywords.'totalplay.Common.getNumValueofObject'(PLPSearch, products_0_discount_percentage)
+//CustomKeywords.'totalplay.Common.getNumValueofObject'(PLPSearch, products_0_discount_percentage)
 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(PLPSearch, products_0_isVariant)

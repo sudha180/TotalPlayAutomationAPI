@@ -4,5 +4,6 @@
    <name>TC_13_Add_Comment_to_Cart_Service</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>073a7bc5-d947-40b5-96b4-8f989e7151c0</testCaseGuid>
 </TestCaseEntity>

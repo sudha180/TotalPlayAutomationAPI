@@ -71,7 +71,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'2016'</initValue>
+      <initValue>'8025'</initValue>
       <name>Seller_ID</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -81,7 +81,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'IUSA'</initValue>
+      <initValue>'Aranzazu'</initValue>
       <name>corporateName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -106,7 +106,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'3'</initValue>
+      <initValue>'2'</initValue>
       <name>quantity</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -141,7 +141,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'6164'</initValue>
+      <initValue>'3936'</initValue>
       <name>SellerId2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -151,12 +151,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'19.439691'</initValue>
+      <initValue>'19.466656'</initValue>
       <name>latitude</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'-99.205670'</initValue>
+      <initValue>'-99.189003'</initValue>
       <name>longitude</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'c_miraklShopID=8025'</initValue>
+      <name>refine_1</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
