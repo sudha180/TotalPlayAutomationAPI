@@ -81,7 +81,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'IUSA'</initValue>
+      <initValue>'Walmart'</initValue>
       <name>corporateName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -138,5 +138,45 @@
       <description></description>
       <initValue>''</initValue>
       <name>OrderNo</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'19.34105611'</initValue>
+      <name>lattitude1</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'-99.20030711'</initValue>
+      <name>longitude1</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'2020'</initValue>
+      <name>Seller_ID1</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>temporary_basket_id</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>temporary_basket_order_total</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'T916969439'</initValue>
+      <name>OnDemand_Product</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'T1592525386'</initValue>
+      <name>Digital_Product</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'2000'</initValue>
+      <name>OnDemand_Store</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -4,5 +4,6 @@
    <name>TC_22_DeleteItemInCart</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>e0c8b783-5e3b-42ef-abc6-3d2b40373200</testCaseGuid>
 </TestCaseEntity>

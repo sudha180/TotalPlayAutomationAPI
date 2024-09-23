@@ -4,5 +4,6 @@
    <name>TC_14_SCPSearch</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>6e1d61b6-12d8-4bd8-98d8-4b7dd2ef2f59</testCaseGuid>
 </TestCaseEntity>

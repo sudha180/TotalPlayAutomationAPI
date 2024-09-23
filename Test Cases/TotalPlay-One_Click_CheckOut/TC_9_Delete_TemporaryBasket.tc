@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_9_Delete_TemporaryBasket</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>30bad5f3-dc53-4bc4-b8ba-35520a48994d</testCaseGuid>
+</TestCaseEntity>

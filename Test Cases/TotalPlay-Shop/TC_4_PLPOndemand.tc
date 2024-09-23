@@ -4,5 +4,6 @@
    <name>TC_4_PLPOndemand</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>854acf0a-0993-4699-9f19-609b3947759c</testCaseGuid>
 </TestCaseEntity>

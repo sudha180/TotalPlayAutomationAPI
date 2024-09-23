@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_5_SubmitPayment_CreditCard</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e67b82e7-b62d-4be1-8754-2ae2efc67c6a</testCaseGuid>
+</TestCaseEntity>

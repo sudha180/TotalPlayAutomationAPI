@@ -956,18 +956,18 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(preAuthPayments, c_fo
  
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(preAuthPayments, c_SellerList_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(preAuthPayments, c_SellerList_name)
- 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(preAuthPayments, c_SellerList_corporateColorCode)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(preAuthPayments, c_SellerList_corporateColorCode)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(preAuthPayments, c_SellerList_corporateColorCode)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(preAuthPayments, c_SellerList_corporateColorCode)
  
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(preAuthPayments, c_SellerList_cartItems)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(preAuthPayments, c_SellerList_cartItems)
  
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(preAuthPayments, c_SellerList_cartItems_productID)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(preAuthPayments, c_SellerList_cartItems_productID)
- 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(preAuthPayments, c_SellerList_cartItems_sellerId)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(preAuthPayments, c_SellerList_cartItems_sellerId)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(preAuthPayments, c_SellerList_cartItems_sellerId)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(preAuthPayments, c_SellerList_cartItems_sellerId)
  
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(preAuthPayments, c_SellerList_cartItems_isOnDemandStoreItem)
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(preAuthPayments, c_SellerList_cartItems_isOnDemandStoreItem)

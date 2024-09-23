@@ -5,6 +5,7 @@
    <tag></tag>
    <elementGuidId>3c28b038-f3d3-412b-a049-14655bea5d8a</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
       <authorizationInfo>
@@ -15,6 +16,7 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -31,8 +33,9 @@
    <katalonVersion>9.3.0</katalonVersion>
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v23_1/content/seller-home-page-store?c_imageChannel=iptv&amp;corporateName=${GlobalVariable.corporateName}</restUrl>
+   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v24_5/content/seller-home-page-store?c_imageChannel=iptv&amp;corporateName=${GlobalVariable.corporateName}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -134,7 +137,7 @@ WS.verifyElementPropertyValue(response, 'components[4].products[0].productId', &
 WS.verifyElementPropertyValue(response, 'components[4].products[0].productName', &quot;Bicicleta Rodada 12 para Niño con Ruedas de Apoyo Verde&quot;)
 WS.verifyElementPropertyValue(response, 'components[4].products[0].productType', &quot;standard&quot;)
 WS.verifyElementPropertyValue(response, 'components[4].products[0].basePrice.value', 1149.99)
-WS.verifyElementPropertyValue(response, 'components[4].products[0].basePrice.formatted', &quot;$1,149.99&quot;)
+WS.verifyElementPropertyValue(response, 'components[4].products[0].basePrice.formatted', &quot;1,149.99&quot;)
 WS.verifyElementPropertyValue(response, 'components[4].products[0].salePrice.value', 0)
 WS.verifyElementPropertyValue(response, 'components[4].products[0].image', '')
 WS.verifyElementPropertyValue(response, 'components[4].products[0].image[0].url', &quot;https://salesforceqa.sistemastp.com.mx/dw/image/v2/BJCL_DEV/on/demandware.static/-/Sites-Standard/default/dw099d53e3/images/large/79fe6f0cc39443ed8332f8e68b810d2e.jpg?sw=288&amp;sh=288&quot;)

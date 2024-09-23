@@ -4,5 +4,6 @@
    <name>TC_21_GetMiniCart</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>130000c6-0448-4f50-acf7-b17c3d12a1d4</testCaseGuid>
 </TestCaseEntity>

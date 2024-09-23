@@ -21,16 +21,20 @@ WebUI.callTestCase(findTestCase('TotalPlay-Food/TC_1_Login_Service'), [:], Failu
 
 
 AddProductToBAsket = WS.sendRequest(findTestObject('TotalPlay-Food/AddProductToBasket', [('URL') : GlobalVariable.URL, ('basketID') : GlobalVariable.basketID]))
-
+CustomKeywords.'totalplay.Common.printResponseinText'(AddProductToBAsket)
 WS.verifyResponseStatusCode(AddProductToBAsket, 200)
 
-product_productItemId = 'product.productItemId'
+//product_productItemId = 'product.productItemId'
 
-GlobalVariable.Item_id = WS.getElementPropertyValue(AddProductToBAsket, product_productItemId)
+//GlobalVariable.Item_id = WS.getElementPropertyValue(AddProductToBAsket, product_productItemId)
 
 GlobalVariable.SellerId1 = GlobalVariable.SellerId2
+GlobalVariable.Product_ID = GlobalVariable.Product_ID1
+println(GlobalVariable.SellerId1)
+println(GlobalVariable.Product_ID)
 
 AddProductToBAsket = WS.sendRequest(findTestObject('TotalPlay-Food/AddProductToBasket', [('URL') : GlobalVariable.URL, ('basketID') : GlobalVariable.basketID]))
+CustomKeywords.'totalplay.Common.printResponseinText'(AddProductToBAsket)
 
 println(GlobalVariable.SellerId1)
 WS.verifyResponseStatusCode(AddProductToBAsket, 200)
@@ -41,6 +45,8 @@ GlobalVariable.Item_id = WS.getElementPropertyValue(AddProductToBAsket, product_
 
 
 SwitchBasket = WS.sendRequest(findTestObject('TotalPlay-Food/Food - Switch Basket', [('URL') : GlobalVariable.URL, ('basketID') : GlobalVariable.basketID]))
+CustomKeywords.'totalplay.Common.printResponseinText'(SwitchBasket)
+WS.verifyResponseStatusCode(SwitchBasket, 200)
 
 carts = 'carts'
 

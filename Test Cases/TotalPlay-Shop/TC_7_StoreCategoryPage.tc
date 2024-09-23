@@ -4,5 +4,6 @@
    <name>TC_7_StoreCategoryPage</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>34949e98-f268-415b-b38f-4b68b86b0c61</testCaseGuid>
 </TestCaseEntity>

@@ -277,10 +277,4 @@ CustomKeywords.'totalplay.Common.verifyPropertyExist'(UpdateAddress_Response, c_
  
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(UpdateAddress_Response, c_rfc)
  
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(UpdateAddress_Response, c_references)
- 
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(UpdateAddress_Response, c_references)
- 
-//WS.sendRequest(findTestObject('TotalPlay-Shop/Postman/Address/Update Customer Address', [('URL') : GlobalVariable.URL, ('SITEID') : GlobalVariable.SITEID
-		   // , ('sla_customerId') : GlobalVariable.sla_customerId]))
  

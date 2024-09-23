@@ -4,5 +4,6 @@
    <name>TC_24_Food Order History</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>fa330e98-6fb7-4ca1-a8b4-717a1a6b42ef</testCaseGuid>
 </TestCaseEntity>

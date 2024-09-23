@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_7_PreAuth</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>df0cec89-f9ab-48dd-a3fe-3f94e5336528</testCaseGuid>
+</TestCaseEntity>

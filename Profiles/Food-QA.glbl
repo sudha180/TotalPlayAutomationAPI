@@ -141,7 +141,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'2073'</initValue>
+      <initValue>'6001'</initValue>
       <name>SellerId2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -163,5 +163,10 @@
       <description></description>
       <initValue>'c_miraklShopID=4158'</initValue>
       <name>refine_1</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C1311243617'</initValue>
+      <name>Product_ID1</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

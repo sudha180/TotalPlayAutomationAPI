@@ -4,5 +4,6 @@
    <name>TC_12_SLPSearch</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>33b007cb-07e2-48b2-aa2e-99f774f79437</testCaseGuid>
 </TestCaseEntity>

@@ -470,6 +470,7 @@ c_formatedSavingsTotal = 'c_formatedSavingsTotal'
 c_formatedOrderTotal = 'c_formatedOrderTotal'
  
 c_formatedProductTotal = 'c_formatedProductTotal'
+
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(Place_Order, _v)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(Place_Order, _v)
 //

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+   <description></description>
+   <name>Product Specification</name>
+   <tag></tag>
+   <elementGuidId>590e1598-4166-4733-8a61-190986c5ea5c</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>true</autoUpdateContent>
+   <connectionTimeout>-1</connectionTimeout>
+   <followRedirects>false</followRedirects>
+   <httpBody></httpBody>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
+   <katalonVersion>9.6.0</katalonVersion>
+   <maxResponseSize>-1</maxResponseSize>
+   <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${URL}/s/${SITEID}/dw/shop/v23_1/products/T1300776549?iptv=true&amp;type=specification&amp;myst=true</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
+   <soapHeader></soapHeader>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
+   <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>GlobalVariable.URL</defaultValue>
+      <description></description>
+      <id>e036efae-aa3a-4c7e-b9b4-6165e65d2c76</id>
+      <masked>false</masked>
+      <name>URL</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.SITEID</defaultValue>
+      <description></description>
+      <id>15880cc3-a089-4917-83e7-79fda6dfb7d1</id>
+      <masked>false</masked>
+      <name>SITEID</name>
+   </variables>
+   <wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>

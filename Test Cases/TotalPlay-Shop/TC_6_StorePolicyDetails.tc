@@ -4,5 +4,6 @@
    <name>TC_6_StorePolicyDetails</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>b0647544-934e-43b6-8f27-7fd0165193e4</testCaseGuid>
 </TestCaseEntity>

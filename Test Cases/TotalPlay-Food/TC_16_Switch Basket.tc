@@ -4,5 +4,6 @@
    <name>TC_16_Switch Basket</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>270628b3-682b-42b2-961f-30b14bc68ca7</testCaseGuid>
 </TestCaseEntity>

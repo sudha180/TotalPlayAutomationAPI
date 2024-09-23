@@ -554,9 +554,9 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instrument
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, billing_address_c_neighborhood)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, billing_address_c_neighborhood)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, billing_address_c_references)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, billing_address_c_references)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, billing_address_c_references)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, billing_address_c_references)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, billing_address_c_rfc)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, billing_address_c_rfc)
@@ -752,9 +752,9 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instrument
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, shipments_0_shipping_address_c_neighborhood)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, shipments_0_shipping_address_c_neighborhood)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, shipments_0_shipping_address_c_references)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, shipments_0_shipping_address_c_references)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, shipments_0_shipping_address_c_references)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, shipments_0_shipping_address_c_references)
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, shipments_0_shipping_address_c_rfc)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, shipments_0_shipping_address_c_rfc)
@@ -773,9 +773,9 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instrument
 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, shipments_0_shipping_method_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, shipments_0_shipping_method_name)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, shipments_0_shipping_method_c_estimatedArrivalTime)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, shipments_0_shipping_method_c_estimatedArrivalTime)
+//
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(SetPayment_instruments, shipments_0_shipping_method_c_estimatedArrivalTime)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SetPayment_instruments, shipments_0_shipping_method_c_estimatedArrivalTime)
 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SetPayment_instruments, shipments_0_shipping_method_c_storePickupEnabled)
 

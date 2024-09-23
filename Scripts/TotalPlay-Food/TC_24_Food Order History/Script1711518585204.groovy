@@ -20,6 +20,8 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('TotalPlay-Food/TC_1_Login_Service'), [:], FailureHandling.STOP_ON_FAILURE)
 
 FoodOrderHistory = WS.sendRequest(findTestObject('TotalPlay-Food/Food Order History', [('URL') : GlobalVariable.URL]))
+CustomKeywords.'totalplay.Common.printResponseinText'(FoodOrderHistory)
+WS.verifyResponseStatusCode(FoodOrderHistory, 200)
 
 id='id'
 name='name'

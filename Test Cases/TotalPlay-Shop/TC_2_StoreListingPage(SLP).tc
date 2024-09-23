@@ -4,5 +4,6 @@
    <name>TC_2_StoreListingPage(SLP)</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>178cac71-4c61-4dfd-9741-f27d7e10768a</testCaseGuid>
 </TestCaseEntity>

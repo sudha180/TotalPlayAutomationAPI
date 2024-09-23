@@ -21,7 +21,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n    {\n        \&quot;product_id\&quot;: \&quot;C828554986\&quot;,\n        \&quot;quantity\&quot;: 1.00\n    }\n]&quot;,
+  &quot;text&quot;: &quot;[\n    {\n        \&quot;product_id\&quot;: \&quot;${GlobalVariable.Product_ID}\&quot;,\n        \&quot;quantity\&quot;: 1.00,\n        \&quot;c_comment\&quot;: \&quot;Hello World\&quot;\n    }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -47,7 +47,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.URL}/s/TP-FOOD/dw/shop/v23_1/baskets/${GlobalVariable.FoodBasketId}/items?sellerId=4158&amp;isOOTB=true</restUrl>
+   <restUrl>${GlobalVariable.URL}/s/TP-FOOD/dw/shop/v24_5/baskets/${GlobalVariable.FoodBasketId}/items?sellerId=${GlobalVariable.SellerId1}&amp;isHomo=true</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

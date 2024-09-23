@@ -17,31 +17,32 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-
+ 
 WebUI.callTestCase(findTestCase('TotalPlay-Shop/TC_1_InterfaceLogin'), [:], FailureHandling.STOP_ON_FAILURE)
-
+ 
 AddToCart = WS.sendRequest(findTestObject('TotalPlay-Shop/Postman/Cart/AddProductToBasket', [('URL') : GlobalVariable.URL, ('SITEID') : GlobalVariable.SITEID
-            , ('basketID') : GlobalVariable.basketID]))
-
+			, ('basketID') : GlobalVariable.basketID]))
+ 
 GetBasket = WS.sendRequest(findTestObject('TotalPlay-Shop/Postman/Cart/Get Basket', [('URL') : GlobalVariable.URL, ('SITEID') : GlobalVariable.SITEID
-            , ('basketID') : GlobalVariable.basketID]))
-
+			, ('basketID') : GlobalVariable.basketID]))
+ 
 item_id = 'product_items[0].item_id'
-
+ 
 String Item_id = WS.getElementPropertyValue(GetBasket, item_id)
-
+ 
 KeywordUtil.logInfo(Item_id)
-
+ 
 GlobalVariable.Item_id = Item_id
-
+ 
 DeleteItem_Response = WS.sendRequest(findTestObject('TotalPlay-Shop/Postman/Cart/Delete item from Basket', [('URL') : GlobalVariable.URL
-            , ('SITEID') : GlobalVariable.SITEID, ('basketID') : GlobalVariable.basketID, ('Item_id') : GlobalVariable.Item_id]))
-
+			, ('SITEID') : GlobalVariable.SITEID, ('basketID') : GlobalVariable.basketID, ('Item_id') : GlobalVariable.Item_id]))
+ 
 //KeywordUtil.logInfo(DeleteItem_Response)
+CustomKeywords.'totalplay.Common.printResponseinText'(DeleteItem_Response)
 
 WS.verifyResponseStatusCode(DeleteItem_Response, 200)
-
-
+ 
+ 
 agent_basket = 'agent_basket'
 basket_id = 'basket_id'
 channel_type = 'channel_type'
@@ -117,224 +118,294 @@ c_SellerList_url = 'c_SellerList[0].cartItems[0].productImage[0].url'
 c_SellerList_title = 'c_SellerList[0].cartItems[0].productImage[0].title'
 c_SellerList_quantity = 'c_SellerList[0].cartItems[0].quantity'
 c_SellerList_name1 = 'c_SellerList[0].cartItems[0].name'
-
-
+ 
+adjusted_merchandize_total_tax	=	 'adjusted_merchandize_total_tax'
+adjusted_shipping_total_tax	=	 'adjusted_shipping_total_tax'
+shipments_0_adjusted_merchandize_total_tax	=	 'shipments[0].adjusted_merchandize_total_tax'
+shipments_0_adjusted_shipping_total_tax	=	 'shipments[0].adjusted_shipping_total_tax'
+shipments_0_gift	=	 'shipments[0].gift'
+shipments_0_merchandize_total_tax	=	 'shipments[0].merchandize_total_tax'
+shipments_0_shipping_status	=	 'shipments[0].shipping_status'
+shipments_0_shipping_total	=	 'shipments[0].shipping_total'
+shipments_0_shipping_total_tax	=	 'shipments[0].shipping_total_tax'
+shipments_0_tax_total	=	 'shipments[0].tax_total'
+shipping_items_0_adjusted_tax	=	 'shipping_items[0].adjusted_tax'
+shipping_items_0_base_price	=	 'shipping_items[0].base_price'
+shipping_items_0_price	=	 'shipping_items[0].price'
+shipping_items_0_price_after_item_discount	=	 'shipping_items[0].price_after_item_discount'
+shipping_items_0_tax	=	 'shipping_items[0].tax'
+shipping_items_0_tax_basis	=	 'shipping_items[0].tax_basis'
+shipping_items_0_tax_rate	=	 'shipping_items[0].tax_rate'
+shipping_total	=	 'shipping_total'
+shipping_total_tax	=	 'shipping_total_tax'
+tax_total	=	 'tax_total'
+ 
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, agent_basket)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, agent_basket)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, basket_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, basket_id)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, channel_type)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, channel_type)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, creation_date)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, creation_date)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, currency)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, currency)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, customer_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, customer_id)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, customer_no)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, customer_no)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, email)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, email)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, last_modified)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, last_modified)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, link)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, link)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, order_total)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, order_total)
-
+ 
 //CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, base_price)
 ////CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, base_price)
-
+ 
 //CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, bonus_product_line_item)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, bonus_product_line_item)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, gift)
+ 
+//CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, gift)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, gift)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, inventory_id)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, inventory_id)
-
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, inventory_id)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, inventory_id)
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, item_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, item_id)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, item_text)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, item_text)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, price)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, price)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, price_after_item_discount)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, price_after_item_discount)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, price_after_order_discount)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, price_after_order_discount)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, product_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, product_id)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, product_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, product_name)
-
+ 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(DeleteItem_Response, quantity)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, quantity)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, shipment_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipment_id)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, tax_basis)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, tax_basis)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, tax_class_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, tax_class_id)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_fromStoreId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_fromStoreId)
-
+ 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(DeleteItem_Response, c_miraklLeadTimeToShip)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_miraklLeadTimeToShip)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, c_isOnDemandStoreItem)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_isOnDemandStoreItem)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_miraklOperatorProductId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_miraklOperatorProductId)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_offerId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_offerId)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, c_offerListPrice)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_offerListPrice)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, c_offerSalesPrice)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_offerSalesPrice)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_offerState)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_offerState)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_offerStateCode)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_offerStateCode)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, alt)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, alt)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, url)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, url)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, title)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, title)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_shopId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_shopId)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_shopName)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_shopName)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, product_sub_total)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, product_sub_total)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, product_total)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, product_total)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, shipment_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipment_id)
-
+ 
 CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipment_total)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipment_total)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, shipping_method_type)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipping_method_type)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, shipping_method_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipping_method_id)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, shipping_method_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipping_method_name)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, c_storePickupEnabled)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_storePickupEnabled)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, shipping_status)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipping_status)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, shipping_total)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipping_total)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, shipping_total_tax)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipping_total_tax)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, shipping_items_item_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipping_items_item_id)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, shipping_items_item_text)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipping_items_item_text)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_corporateImgUrl)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_corporateImgUrl)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_currentCorporate)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_currentCorporate)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_currentMultiStoreID)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_currentMultiStoreID)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, c_isLock)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_isLock)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_lockTime)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_lockTime)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, c_isMiraklOrder)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_isMiraklOrder)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_miraklShippingZoneCode)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_miraklShippingZoneCode)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_multiStoreEDD)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_multiStoreEDD)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, c_savingsTotal)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_savingsTotal)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_SellerList_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_name)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_SellerList_corporateImgURL)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_corporateImgURL)
-
+ 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(DeleteItem_Response, c_SellerList_productsCount)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_productsCount)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_SellerList_productID)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_productID)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_SellerList_sellerId)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_sellerId)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, c_SellerList_isOnDemandStoreItem)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_isOnDemandStoreItem)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_SellerList_alt)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_alt)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_SellerList_url)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_url)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_SellerList_title)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_title)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_SellerList_quantity)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_quantity)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, c_SellerList_name1)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, c_SellerList_name1)
-
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, adjusted_merchandize_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, adjusted_shipping_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipments_0_adjusted_merchandize_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipments_0_adjusted_shipping_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipments_0_merchandize_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, adjusted_shipping_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipments_0_adjusted_merchandize_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipments_0_adjusted_shipping_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipments_0_merchandize_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipments_0_shipping_total)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipments_0_shipping_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipments_0_tax_total)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipping_items_0_adjusted_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipping_items_0_base_price)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipping_items_0_price)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipping_items_0_price_after_item_discount)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipping_items_0_price_after_item_discount)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipping_items_0_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipping_items_0_tax_basis)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipping_items_0_tax_rate)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, shipping_total_tax)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(DeleteItem_Response, tax_total)
+ 
+CustomKeywords.'totalplay.Common.getBooleanValueofObject'(DeleteItem_Response, shipments_0_gift)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(DeleteItem_Response, shipments_0_shipping_status)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(DeleteItem_Response, shipments_0_shipping_status)
+ 

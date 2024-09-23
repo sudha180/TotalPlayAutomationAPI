@@ -72,6 +72,21 @@ public class GlobalVariable {
     /**
      * <p></p>
      */
+    public static Object temporary_basket_id
+     
+    /**
+     * <p></p>
+     */
+    public static Object temporary_basket_order_total
+     
+    /**
+     * <p></p>
+     */
+    public static Object crm_address_id
+     
+    /**
+     * <p></p>
+     */
     public static Object client_id
      
     /**
@@ -157,11 +172,6 @@ public class GlobalVariable {
     /**
      * <p></p>
      */
-    public static Object crm_address_id
-     
-    /**
-     * <p></p>
-     */
     public static Object SellerId1
      
     /**
@@ -192,7 +202,42 @@ public class GlobalVariable {
     /**
      * <p></p>
      */
+    public static Object Product_ID1
+     
+    /**
+     * <p></p>
+     */
     public static Object lattitude
+     
+    /**
+     * <p></p>
+     */
+    public static Object lattitude1
+     
+    /**
+     * <p></p>
+     */
+    public static Object longitude1
+     
+    /**
+     * <p></p>
+     */
+    public static Object Seller_ID1
+     
+    /**
+     * <p></p>
+     */
+    public static Object OnDemand_Product
+     
+    /**
+     * <p></p>
+     */
+    public static Object Digital_Product
+     
+    /**
+     * <p></p>
+     */
+    public static Object OnDemand_Store
      
 
     static {
@@ -213,6 +258,9 @@ public class GlobalVariable {
             shop_auth_token = selectedVariables['shop_auth_token']
             customerId = selectedVariables['customerId']
             access_token = selectedVariables['access_token']
+            temporary_basket_id = selectedVariables['temporary_basket_id']
+            temporary_basket_order_total = selectedVariables['temporary_basket_order_total']
+            crm_address_id = selectedVariables['crm_address_id']
             client_id = selectedVariables['client_id']
             bm_auth_token = selectedVariables['bm_auth_token']
             refresh_token = selectedVariables['refresh_token']
@@ -230,14 +278,20 @@ public class GlobalVariable {
             SellerList = selectedVariables['SellerList']
             FoodBasketId = selectedVariables['FoodBasketId']
             OrderNo = selectedVariables['OrderNo']
-            crm_address_id = selectedVariables['crm_address_id']
             SellerId1 = selectedVariables['SellerId1']
             SellerId2 = selectedVariables['SellerId2']
             brm_id = selectedVariables['brm_id']
             latitude = selectedVariables['latitude']
             longitude = selectedVariables['longitude']
             refine_1 = selectedVariables['refine_1']
+            Product_ID1 = selectedVariables['Product_ID1']
             lattitude = selectedVariables['lattitude']
+            lattitude1 = selectedVariables['lattitude1']
+            longitude1 = selectedVariables['longitude1']
+            Seller_ID1 = selectedVariables['Seller_ID1']
+            OnDemand_Product = selectedVariables['OnDemand_Product']
+            Digital_Product = selectedVariables['Digital_Product']
+            OnDemand_Store = selectedVariables['OnDemand_Store']
             
         } catch (Exception e) {
             TestCaseMain.logGlobalVariableError(e)

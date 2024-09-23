@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_6_SubmitPayment_TPCredit</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e3a169eb-d006-40ec-af15-3ee354d49ee6</testCaseGuid>
+</TestCaseEntity>

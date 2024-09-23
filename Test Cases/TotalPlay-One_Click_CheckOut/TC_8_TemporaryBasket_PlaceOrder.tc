@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_8_TemporaryBasket_PlaceOrder</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ae6b7d04-96be-4c47-99e4-885dc85e8264</testCaseGuid>
+</TestCaseEntity>

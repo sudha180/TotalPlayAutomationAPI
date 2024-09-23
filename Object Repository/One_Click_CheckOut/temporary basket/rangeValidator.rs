@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+   <description></description>
+   <name>rangeValidator</name>
+   <tag></tag>
+   <elementGuidId>f80b5321-2959-4c7f-8cc1-c75902730ae5</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>true</autoUpdateContent>
+   <connectionTimeout>-1</connectionTimeout>
+   <followRedirects>false</followRedirects>
+   <httpBody></httpBody>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;&quot;,
+  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
+   <katalonVersion>9.6.0</katalonVersion>
+   <maxResponseSize>-1</maxResponseSize>
+   <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${URL}/s/${SITEID}/dw/shop/v23_1/custom_objects/temporary_basket/rangeValidator?storeID=2088&amp;longitude=-99.22656&amp;latitude=19.34939&amp;product_id=T10158397</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
+   <soapHeader></soapHeader>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
+   <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>GlobalVariable.URL</defaultValue>
+      <description></description>
+      <id>ab49de8a-655f-4c1c-8fef-7876177e1fca</id>
+      <masked>false</masked>
+      <name>URL</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.SITEID</defaultValue>
+      <description></description>
+      <id>90beaa45-9e27-480a-983e-c1ec6018be29</id>
+      <masked>false</masked>
+      <name>SITEID</name>
+   </variables>
+   <wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>

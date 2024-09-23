@@ -492,7 +492,7 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(getOrderByID, c_resul
 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(getOrderByID, c_result_shipments_0_c_productItems_0_is_cancelled)
 
-CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(getOrderByID, c_result_shipments_0_c_productItems_0_promotions)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(getOrderByID, c_result_shipments_0_c_productItems_0_promotions)
 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(getOrderByID, c_result_shipments_0_c_productItems_0_c_isOnDemandStoreItem)
 

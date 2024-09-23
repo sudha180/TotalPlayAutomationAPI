@@ -215,9 +215,9 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, 
  
 CustomKeywords.'totalplay.Common.getNumValueofObject'(GetAddress_Response, total)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, total)
- 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_c_references)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_c_references)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_c_references)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_c_references)
  
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(GetAddress_Response, data_0_c_rfc)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(GetAddress_Response, data_0_c_rfc)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_4_CreateTemporaryBasket_D_Product</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fb06c56d-75ad-4a0d-ba3c-9ec0714b5a08</testCaseGuid>
+</TestCaseEntity>

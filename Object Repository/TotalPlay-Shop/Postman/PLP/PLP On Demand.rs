@@ -5,6 +5,7 @@
    <tag></tag>
    <elementGuidId>fb929a87-111a-4d48-926d-a8704f1008f7</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
       <authorizationInfo>
@@ -15,6 +16,7 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -35,8 +37,9 @@
    <katalonVersion>9.3.0</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${URL}/on/demandware.store/Sites-TP-SHOP-Site/es/OnDemand-Show?corporateName=Maskota&amp;lat=19.31545&amp;long=-99.24244</restUrl>
+   <restUrl>${GlobalVariable.URL}/on/demandware.store/Sites-TP-SHOP-Site/es/OnDemand-Show?corporateName=${GlobalVariable.corporateName}&amp;lat=${GlobalVariable.lattitude1}&amp;long=${GlobalVariable.longitude1}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

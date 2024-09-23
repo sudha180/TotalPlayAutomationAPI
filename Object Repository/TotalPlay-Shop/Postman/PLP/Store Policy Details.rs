@@ -5,6 +5,7 @@
    <tag></tag>
    <elementGuidId>b8490a90-f951-409b-9452-634f09f04af5</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
       <authorizationInfo>
@@ -15,6 +16,7 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -31,8 +33,9 @@
    <katalonVersion>9.3.0</katalonVersion>
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v23_1/content/store-details?sellerID=${GlobalVariable.Seller_ID}</restUrl>
+   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v24_5/content/store-details?sellerID=${GlobalVariable.Seller_ID}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -88,7 +91,7 @@ WS.verifyElementPropertyValue(response, 'c_result.open', true)
 WS.verifyElementPropertyValue(response, 'c_result.corporateName', &quot;IUSA&quot;)
 WS.verifyElementPropertyValue(response, 'c_result.shipmentCost.value', 50)
 WS.verifyElementPropertyValue(response, 'c_result.shipmentCost.currency', &quot;MXN&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.shipmentCost.formatted', &quot;$50.00&quot;)
+WS.verifyElementPropertyValue(response, 'c_result.shipmentCost.formatted', &quot;50.00&quot;)
 WS.verifyElementPropertyValue(response, 'c_result.shipmentCost.decimalPrice', &quot;50.00&quot;)
 WS.verifyElementPropertyValue(response, 'c_result.storeType', &quot;Hogar&quot;)
 WS.verifyElementPropertyValue(response, 'c_result.verticalType', &quot;MultiStore&quot;)

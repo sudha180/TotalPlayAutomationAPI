@@ -64,4 +64,19 @@
       <initValue>''</initValue>
       <name>access_token</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>temporary_basket_id</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>temporary_basket_order_total</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>crm_address_id</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

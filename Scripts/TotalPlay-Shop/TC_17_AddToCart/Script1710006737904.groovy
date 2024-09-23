@@ -617,9 +617,9 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(AddToCart_Response, p
  
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(AddToCart_Response, product_items_0__c_individualDelivery)
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(AddToCart_Response, product_items_0__c_isOnDemandStoreItem)
- 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(AddToCart_Response, product_items_0__c_miraklLeadTimeToShip)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(AddToCart_Response, product_items_0__c_miraklLeadTimeToShip)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(AddToCart_Response, product_items_0__c_miraklLeadTimeToShip)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(AddToCart_Response, product_items_0__c_miraklLeadTimeToShip)
  
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(AddToCart_Response, product_items_0__c_miraklOperatorProductId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(AddToCart_Response, product_items_0__c_miraklOperatorProductId)

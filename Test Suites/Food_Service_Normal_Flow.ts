@@ -81,4 +81,11 @@
       <testCaseId>Test Cases/TotalPlay-Food/TC_6_Food PDP</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
+   <testCaseLink>
+      <guid>52501627-11fd-4fb4-a8fc-424fd20f5abb</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TotalPlay-Food/TC_2_Food_Store_Listing_Page_(SLP)</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
 </TestSuiteEntity>

@@ -4,5 +4,6 @@
    <name>TC_13_PLPSearch</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>74a2c032-bd14-434e-b9e6-24bee4de5432</testCaseGuid>
 </TestCaseEntity>

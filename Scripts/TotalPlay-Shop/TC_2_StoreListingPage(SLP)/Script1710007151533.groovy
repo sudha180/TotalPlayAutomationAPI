@@ -16,13 +16,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
+ 
 WebUI.callTestCase(findTestCase('TotalPlay-Shop/TC_1_InterfaceLogin'), [:], FailureHandling.STOP_ON_FAILURE)
-
+ 
 SLP_Response = WS.sendRequest(findTestObject('TotalPlay-Shop/Postman/SLP/Store Listing Page', [('URL') : GlobalVariable.URL, ('SITEID') : GlobalVariable.SITEID]))
-
+ 
 WS.verifyResponseStatusCode(SLP_Response,200)
-
+ 
 homebanner_pageId = 'pageId'
 homebanner_pageTypeId = 'pageTypeId'
 homebanner_pageTitle = 'pageTitle'
@@ -41,8 +41,8 @@ homebanner_bannerName = 'components[0].componentAssets[1].bannerName'
 homebanner_linkType = 'components[0].componentAssets[1].linkType'
 homebanner_storeLogo = 'components[0].componentAssets[1].storeLogo'
 homebanner_corporateColorCode = 'components[0].componentAssets[1].corporateColorCode'
-
-
+ 
+ 
 CategoryCluster_componentTypeId = 'components[1].componentTypeId'
 CategoryCluster_componentType = 'components[1].componentType'
 CategoryCluster_storeSelectorvalue = 'components[1].storeSelector.value'
@@ -63,8 +63,8 @@ CategoryCluster_multistoreEDD = 'components[1].storeList[0].multistoreEDD'
 CategoryCluster_isAgeRestricted = 'components[1].storeList[0].isAgeRestricted'
 CategoryCluster_link = 'components[1].storeList[0].link'
 CategoryCluster_linkType = 'components[1].storeList[0].linkType'
-
-
+ 
+ 
 CategoryCluster1_componentTypeId = 'components[2].componentTypeId'
 CategoryCluster1_componentType = 'components[2].componentType'
 CategoryCluster1_storeSelectorvalue = 'components[2].storeSelector.value'
@@ -82,196 +82,193 @@ CategoryCluster1_corporateName = 'components[2].storeList[0].corporateName'
 CategoryCluster1_isInRange = 'components[2].storeList[0].isInRange'
 CategoryCluster1_storeOpen = 'components[2].storeList[0].storeOpen'
 CategoryCluster1_OpenHrs = 'components[2].storeList[0].OpenHrs'
-CategoryCluster1_ondemandEDD = 'components[2].storeList[0].ondemandEDD'
+CategoryCluster1_ondemandEDD = 'components[2].storeList[0].multistoreEDD'
 CategoryCluster1_isAgeRestricted = 'components[2].storeList[0].isAgeRestricted'
 CategoryCluster1_link = 'components[2].storeList[0].link'
 CategoryCluster1_linkType = 'components[2].storeList[0].linkType'
-
-
-GroupingStores_componentTypeId = 'components[5].componentTypeId'
-GroupingStores_componentType = 'components[5].componentType'
-GroupingStores_groupingName = 'components[5].groupingName'
-GroupingStores_linkType = 'components[5].linkType'
-GroupingStores_link = 'components[5].link'
-GroupingStores_componentTypeId = 'components[5].componentAssets[0].componentTypeId'
-GroupingStores_componentType = 'components[5].componentAssets[0].componentType'
-GroupingStores_storeDesc = 'components[5].componentAssets[0].storeDesc'
-GroupingStores_Storelink = 'components[5].componentAssets[0].link'
-GroupingStores_StorelinkType = 'components[5].componentAssets[0].linkType'
-GroupingStores_bgImage = 'components[5].componentAssets[0].bgImage'
-GroupingStores_storeIDvalue = 'components[5].componentAssets[0].storeID.value'
-GroupingStores_logo = 'components[5].componentAssets[0].logo'
-GroupingStores_storeName = 'components[5].componentAssets[0].storeName'
-GroupingStores_corporateColorCode = 'components[5].componentAssets[0].corporateColorCode'
-GroupingStores_corporateName = 'components[5].componentAssets[0].corporateName'
-GroupingStores_ondemandEDD = 'components[5].componentAssets[0].ondemandEDD'
-GroupingStores_multistoreEDD = 'components[5].componentAssets[0].multistoreEDD'
-GroupingStores_storeOpen = 'components[5].componentAssets[0].storeOpen'
-GroupingStores_OpenHrs = 'components[5].componentAssets[0].OpenHrs'
-GroupingStores_isAgeRestricted = 'components[5].componentAssets[0].isAgeRestricted'
-
+ 
+ 
+GroupingStores_componentTypeId = 'components[6].componentTypeId'
+GroupingStores_componentType = 'components[6].componentType'
+GroupingStores_groupingName = 'components[6].groupingName'
+GroupingStores_linkType = 'components[6].linkType'
+GroupingStores_link = 'components[6].link'
+GroupingStores_componentTypeId = 'components[6].componentAssets[0].componentTypeId'
+GroupingStores_componentType = 'components[6].componentAssets[0].componentType'
+GroupingStores_storeDesc = 'components[6].componentAssets[0].storeDesc'
+GroupingStores_Storelink = 'components[6].componentAssets[0].link'
+GroupingStores_StorelinkType = 'components[6].componentAssets[0].linkType'
+GroupingStores_bgImage = 'components[6].componentAssets[0].bgImage'
+GroupingStores_storeIDvalue = 'components[6].componentAssets[0].storeID.value'
+GroupingStores_logo = 'components[6].componentAssets[0].logo'
+GroupingStores_storeName = 'components[6].componentAssets[0].storeName'
+GroupingStores_corporateColorCode = 'components[6].componentAssets[0].corporateColorCode'
+GroupingStores_corporateName = 'components[6].componentAssets[0].corporateName'
+GroupingStores_ondemandEDD = 'components[6].componentAssets[0].ondemandEDD'
+GroupingStores_multistoreEDD = 'components[6].componentAssets[0].multistoreEDD'
+GroupingStores_storeOpen = 'components[6].componentAssets[0].storeOpen'
+GroupingStores_OpenHrs = 'components[6].componentAssets[0].OpenHrs'
+GroupingStores_isAgeRestricted = 'components[6].componentAssets[0].isAgeRestricted'
+ 
 // homebanner
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_pageId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_pageId)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_pageTypeId)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_pageTypeId)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_pageTitle)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_pageTitle)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_textHeadline)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_textHeadline)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_image)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_image)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_bannerDesc)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_bannerDesc)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SLP_Response, homebanner_isAgeRestricted)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_isAgeRestricted)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_link)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_link)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_weblink)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_weblink)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_bannerName)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_bannerName)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_linkType)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_linkType)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SLP_Response, homebanner_storeLogo)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_storeLogo)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, homebanner_corporateColorCode)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, homebanner_corporateColorCode)
-
-// storeCategoryCluster 
-
+ 
+// storeCategoryCluster
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_storeSelectorvalue)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_storeSelectorvalue)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_groupingName)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_groupingName)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SLP_Response, CategoryCluster_isCluster)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_isCluster)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_clusterName)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_clusterName)
-
+ 
 CustomKeywords.'totalplay.Common.getNumValueofObject'(SLP_Response, CategoryCluster_nodesLength)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_nodesLength)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_link)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_link)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_linkType)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_linkType)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_ID)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_ID)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_name)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_logo)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_logo)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_corporateColorCode)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_corporateColorCode)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_corporateName)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_corporateName)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SLP_Response, CategoryCluster_storeOpen)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_storeOpen)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_OpenHrs)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_OpenHrs)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_multistoreEDD)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_multistoreEDD)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SLP_Response, CategoryCluster_isAgeRestricted)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_isAgeRestricted)
-
-
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_link)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_link)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_linkType)  
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster_linkType)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster_linkType)
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SLP_Response, CategoryCluster1_isInRange)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster1_isInRange)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, CategoryCluster1_ondemandEDD)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, CategoryCluster1_ondemandEDD)
-
+ 
 // StoreCategoryGroup
-
-
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_groupingName )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_groupingName )
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_linkType )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_linkType )
-
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_link )
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_link )
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_storeDesc )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_storeDesc )
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_Storelink )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_Storelink )
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_StorelinkType )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_StorelinkType )
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_bgImage )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_bgImage )
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_storeIDvalue )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_storeIDvalue )
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_logo )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_logo )
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_storeName )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_storeName )
-
-
+ 
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_corporateColorCode )
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_corporateColorCode )
-
-
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_corporateName )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_corporateName )
-
-
+ 
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_ondemandEDD )
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_ondemandEDD )
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_multistoreEDD )
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_multistoreEDD )
-
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SLP_Response, GroupingStores_storeOpen)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_storeOpen)
-
+ 
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(SLP_Response, GroupingStores_OpenHrs )
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_OpenHrs )
-
-
+ 
+ 
 CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SLP_Response, GroupingStores_isAgeRestricted)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SLP_Response, GroupingStores_isAgeRestricted)
-
-
-
-
+ 

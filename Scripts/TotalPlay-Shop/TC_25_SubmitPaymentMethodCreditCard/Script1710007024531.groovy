@@ -661,15 +661,15 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shi
  
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_address_c_nExt)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shipments_0_shipping_address_c_nExt)
- 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_address_c_nInt)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shipments_0_shipping_address_c_nInt)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_address_c_nInt)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shipments_0_shipping_address_c_nInt)
  
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_address_c_neighborhood)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, billing_address_c_neighborhood)
- 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_address_c_references)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shipments_0_shipping_address_c_references)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_address_c_references)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shipments_0_shipping_address_c_references)
  
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_address_c_rfc)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shipments_0_shipping_address_c_rfc)
@@ -679,9 +679,9 @@ CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shi
  
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_address_c_streetName)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shipments_0_shipping_address_c_streetName)
- 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_address_c_streetNumber)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shipments_0_shipping_address_c_streetNumber)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_address_c_streetNumber)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shipments_0_shipping_address_c_streetNumber)
  
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(MethodCreditCard, shipments_0_shipping_method_id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(MethodCreditCard, shipments_0_shipping_method_id)

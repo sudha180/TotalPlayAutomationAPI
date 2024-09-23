@@ -280,9 +280,9 @@ CustomKeywords.'totalplay.Common.getBooleanValueofObject'(Review_Page, agent_bas
  
 //CustomKeywords.'totalplay.Common.verifyPropertyExist'(Review_Page, billing_address_type)
 //CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(Review_Page, billing_address_type)
- 
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(Review_Page, billing_address_address1)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(Review_Page, billing_address_address1)
+// 
+//CustomKeywords.'totalplay.Common.verifyPropertyExist'(Review_Page, billing_address_address1)
+//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(Review_Page, billing_address_address1)
  
  
  

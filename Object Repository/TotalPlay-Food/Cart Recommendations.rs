@@ -5,6 +5,7 @@
    <tag></tag>
    <elementGuidId>fa75e608-e0ba-457e-833a-5a077529e6cd</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
       <authorizationInfo>
@@ -15,7 +16,8 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
-   <connectionTimeout>-1</connectionTimeout>
+   <autoUpdateContent>true</autoUpdateContent>
+   <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent></httpBodyContent>
@@ -29,17 +31,18 @@
       <webElementGuid>8b40d7e3-7f17-497a-a859-a95af72e0d11</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.5.5</katalonVersion>
-   <maxResponseSize>-1</maxResponseSize>
+   <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.URL}/s/TP-FOOD/dw/shop/v23_1/content/recommendations-cart?productIds=C706884490,C573239572&amp;sellerID=2073</restUrl>
+   <restUrl>${GlobalVariable.URL}/s/TP-FOOD/dw/shop/v24_5/content/recommendations-cart?productIds=${GlobalVariable.Product_ID}&amp;sellerID=${GlobalVariable.SellerId1}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <socketTimeout>-1</socketTimeout>
+   <socketTimeout>0</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>GlobalVariable.URL</defaultValue>

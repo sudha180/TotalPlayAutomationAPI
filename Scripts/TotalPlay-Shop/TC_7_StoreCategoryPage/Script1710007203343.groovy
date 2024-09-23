@@ -16,13 +16,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
+ 
 WebUI.callTestCase(findTestCase('TotalPlay-Shop/TC_1_InterfaceLogin'), [:], FailureHandling.STOP_ON_FAILURE)
-
+ 
 SCP_Response = WS.sendRequest(findTestObject('TotalPlay-Shop/Postman/SCP/Store category page', [('URL') : GlobalVariable.URL, ('SITEID') : GlobalVariable.SITEID]))
-
+ 
 WS.verifyResponseStatusCode(SCP_Response, 200)
-
+ 
 id = 'id'
 name = 'name'
 Seller_name = 'c_result.stores[0].name'
@@ -38,99 +38,82 @@ sellerId = 'c_result.stores[0].products[0].sellerId'
 corporateName = 'c_result.stores[0].products[0].corporateName'
 productType = 'c_result.stores[0].products[0].productType'
 productImage = 'c_result.stores[0].products[0].productImage'
-pricetype = 'c_result.stores[0].products[0].price.type'
-min_sales_value = 'c_result.stores[0].products[0].price.min.sales.value'
-min_sales_currency = 'c_result.stores[0].products[0].price.min.sales.currency'
-min_sales_formatted = 'c_result.stores[0].products[0].price.min.sales.formatted'
-min_sales_decimalPrice = 'c_result.stores[0].products[0].price.min.sales.decimalPrice'
-max_sales_value = 'c_result.stores[0].products[0].price.max.sales.value'
-max_sales_formatted = 'c_result.stores[0].products[0].price.max.sales.formatted'
-max_sales_decimalPrice = 'c_result.stores[0].products[0].price.max.sales.decimalPrice'
-max_sales_currency = 'c_result.stores[0].products[0].price.max.sales.currency'
-isVariant = 'c_result.stores[0].products[0].isVariant'
-stores_count = 'c_result.stores_count'
-overall_stores_count = 'c_result.overall_stores_count'
-
-
+c_result_stores_0_products_0_price_Sales_value='c_result_stores_0_products_0_price_Sales_value'
+c_result_stores_0_products_0_price_sales_currency	=	 'c_result.stores[0].products[0].price.sales.currency'
+c_result_stores_0_products_0_price_sales_formatted	=	 'c_result.stores[0].products[0].price.sales.formatted'
+c_result_stores_0_products_0_price_sales_decimalPrice	=	 'c_result.stores[0].products[0].price.sales.decimalPrice'
+c_result_stores_0_products_0_price_list_value	=	 'c_result.stores[0].products[0].price.list.value'
+c_result_stores_0_products_0_price_list_currency	=	 'c_result.stores[0].products[0].price.list.currency'
+c_result_stores_0_products_0_price_list_formatted	=	 'c_result.stores[0].products[0].price.list.formatted'
+c_result_stores_0_products_0_price_list_decimalPrice	=	 'c_result.stores[0].products[0].price.list.decimalPrice'
+c_result_stores_0_products_0_isVariant	=	 'c_result.stores[0].products[0].isVariant'
+c_result_pageDetails_pagesCount	=	 'c_result.pageDetails.pagesCount'
+c_result_pageDetails_storesPerPage	=	 'c_result.pageDetails.storesPerPage'
+c_result_pageDetails_currentPage	=	 'c_result.pageDetails.currentPage'
+c_result_pageDetails_currentPage	=	 'c_result.pageDetails.currentPage'
+c_result_overall_stores_count	=	 'c_result.overall_stores_count'
+c_result_stores_count='c_result.stores_count'
+ 
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, id)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, id)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, name)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, Seller_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, Seller_name)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, Seller_image)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, Seller_image)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, ondemandEDD)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, ondemandEDD)
-
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyValueEmptyString'(SCP_Response, ondemandEDD)
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, corporateColorCode)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, corporateColorCode)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, multiStoreEDD)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, multiStoreEDD)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, link)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, link)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, linkType)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, linkType)
-
+ 
 CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, product_name)
 CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, product_name)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, productImage)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, productImage)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, pricetype)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, pricetype)
-
-CustomKeywords.'totalplay.Common.getDecimalValueofObject'(SCP_Response, min_sales_value)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, min_sales_value)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, min_sales_currency)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, min_sales_currency)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, min_sales_formatted)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, min_sales_formatted)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, min_sales_decimalPrice)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, min_sales_decimalPrice)
-
-CustomKeywords.'totalplay.Common.getDecimalValueofObject'(SCP_Response, max_sales_value)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, max_sales_value)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, max_sales_formatted)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, max_sales_formatted)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, max_sales_decimalPrice)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, max_sales_decimalPrice)
-
-CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, max_sales_currency)
-CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, max_sales_currency)
-
-CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SCP_Response, isVariant)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, isVariant)
-
-CustomKeywords.'totalplay.Common.getNumValueofObject'(SCP_Response, stores_count)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, stores_count)
-
-CustomKeywords.'totalplay.Common.getNumValueofObject'(SCP_Response, overall_stores_count)
-//CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, overall_stores_count)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(SCP_Response, c_result_stores_0_products_0_price_Sales_value)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, c_result_stores_0_products_0_price_sales_currency)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, c_result_stores_0_products_0_price_sales_currency)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, c_result_stores_0_products_0_price_sales_formatted)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, c_result_stores_0_products_0_price_sales_formatted)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, c_result_stores_0_products_0_price_sales_decimalPrice)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, c_result_stores_0_products_0_price_sales_decimalPrice)
+ 
+CustomKeywords.'totalplay.Common.getDecimalValueofObject'(SCP_Response, c_result_stores_0_products_0_price_list_value)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, c_result_stores_0_products_0_price_list_currency)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, c_result_stores_0_products_0_price_list_currency)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, c_result_stores_0_products_0_price_list_formatted)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, c_result_stores_0_products_0_price_list_formatted)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, c_result_stores_0_products_0_price_list_decimalPrice)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, c_result_stores_0_products_0_price_list_decimalPrice)
+ 
+CustomKeywords.'totalplay.Common.getBooleanValueofObject'(SCP_Response, c_result_stores_0_products_0_isVariant)
+ 
+CustomKeywords.'totalplay.Common.getNumValueofObject'(SCP_Response, c_result_pageDetails_pagesCount)
+CustomKeywords.'totalplay.Common.getNumValueofObject'(SCP_Response, c_result_pageDetails_storesPerPage)
+ 
+CustomKeywords.'totalplay.Common.verifyPropertyExist'(SCP_Response, c_result_pageDetails_currentPage)
+CustomKeywords.'totalplay.Common.verifyPropertyValueExist'(SCP_Response, c_result_pageDetails_currentPage)
+ 
+CustomKeywords.'totalplay.Common.getNumValueofObject'(SCP_Response, c_result_overall_stores_count)
+CustomKeywords.'totalplay.Common.getNumValueofObject'(SCP_Response, c_result_stores_count)
+ 

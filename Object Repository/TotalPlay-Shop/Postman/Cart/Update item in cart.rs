@@ -5,6 +5,7 @@
    <tag></tag>
    <elementGuidId>26b7f8e2-4c96-4813-9fdf-65ab53644f4c</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
       <authorizationInfo>
@@ -15,6 +16,7 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -43,8 +45,9 @@
    <katalonVersion>9.3.0</katalonVersion>
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>PATCH</restRequestMethod>
-   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v23_1/baskets/${GlobalVariable.basketID}/items/${GlobalVariable.Item_id}</restUrl>
+   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v24_5/baskets/${GlobalVariable.basketID}/items/${GlobalVariable.Item_id}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -89,13 +92,13 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 WS.verifyElementPropertyValue(response, '_flash[0].type', &quot;PaymentMethodRequired&quot;)
 WS.verifyElementPropertyValue(response, '_flash[0].message', &quot;No payment method ID was specified. Please provide a valid payment method ID.&quot;)
-WS.verifyElementPropertyValue(response, '_flash[0].path', &quot;$.payment_instruments[0].payment_method_id&quot;)
+WS.verifyElementPropertyValue(response, '_flash[0].path', &quot;.payment_instruments[0].payment_method_id&quot;)
 WS.verifyElementPropertyValue(response, '_flash[1].type', &quot;BillingAddressRequired&quot;)
 WS.verifyElementPropertyValue(response, '_flash[1].message', &quot;No billing address was specified. Please provide a valid billing address.&quot;)
-WS.verifyElementPropertyValue(response, '_flash[1].path', &quot;$.billing_address&quot;)
+WS.verifyElementPropertyValue(response, '_flash[1].path', &quot;.billing_address&quot;)
 WS.verifyElementPropertyValue(response, '_flash[2].type', &quot;ShippingAddressRequired&quot;)
 WS.verifyElementPropertyValue(response, '_flash[2].message', &quot;No shipping address was specified. Please provide a valid shipping address.&quot;)
-WS.verifyElementPropertyValue(response, '_flash[2].path', &quot;$.shipments[0].shipping_address&quot;)
+WS.verifyElementPropertyValue(response, '_flash[2].path', &quot;.shipments[0].shipping_address&quot;)
 WS.verifyElementPropertyValue(response, 'agent_basket', false)
 WS.verifyElementPropertyValue(response, 'basket_id', &quot;8843f4b9b648aa119bf31ba327&quot;)
 WS.verifyElementPropertyValue(response, 'channel_type', &quot;storefront&quot;)

@@ -5,6 +5,7 @@
    <tag></tag>
    <elementGuidId>9f116a41-e0a3-4706-8567-a64721b7ce29</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
    <authorizationRequest>
       <authorizationInfo>
@@ -15,6 +16,7 @@
       </authorizationInfo>
       <authorizationType>Bearer</authorizationType>
    </authorizationRequest>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -31,8 +33,9 @@
    <katalonVersion>9.3.0</katalonVersion>
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v23_1/content/seller-category-page?page=1&amp;storeType=${GlobalVariable.storeType}</restUrl>
+   <restUrl>${GlobalVariable.URL}/s/${GlobalVariable.SITEID}/dw/shop/v24_5/content/seller-category-page?page=1&amp;storeType=${GlobalVariable.storeType}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -86,10 +89,10 @@ WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].productI
 WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.type', &quot;range&quot;)
 WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.min.sales.value', 6699.43)
 WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.min.sales.currency', &quot;MXN&quot;)
-WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.min.sales.formatted', &quot;$6,699.43&quot;)
+WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.min.sales.formatted', &quot;6,699.43&quot;)
 WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.min.sales.decimalPrice', &quot;6699.43&quot;)
 WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.max.sales.value', 13398.87)
-WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.max.sales.formatted', &quot;$13,398.87&quot;)
+WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.max.sales.formatted', &quot;13,398.87&quot;)
 WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.max.sales.decimalPrice', &quot;13398.87&quot;)
 WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].price.max.sales.currency', &quot;MXN&quot;)
 WS.verifyElementPropertyValue(response, 'c_result.stores[0].products[0].isVariant', false)
